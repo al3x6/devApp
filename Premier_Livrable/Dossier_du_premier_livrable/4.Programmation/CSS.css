@@ -41,7 +41,7 @@ li>a {
     max-width: 200px;
     max-width: 200px;
     border-radius: 15px;
-    filter: drop-shadow(5px 3px 1px rgb(80, 79, 79))
+    filter: drop-shadow(7px 7px 4px rgb(109, 108, 108))
 }
 
 
@@ -94,16 +94,19 @@ p {
     padding-top: 25px;
     padding-bottom: 15%;
     margin-top: 10%;
+    margin-bottom: 10%;
     margin-inline: 25%;
     background-color: white;
     border-radius: 15px;
     text-align: center;
-    filter: drop-shadow(5px 3px 1px rgb(80, 79, 79));
+    filter: drop-shadow(7px 7px 4px rgb(109, 108, 108));
     position: relative;
 }
 
 .rectangle_blanc>h3 {
     padding: 10%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
 
 .textfield {
