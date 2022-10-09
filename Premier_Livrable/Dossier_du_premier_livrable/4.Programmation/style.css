@@ -1,16 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /*On met à 0 pour que la barre de naviation soit bien collée en haut de la page*/
     /*Et le footer en bas */
 }
 
-html {
+body {
     background-color: rgb(181, 224, 253);
 }
 
 
-/* Barre de navigation */
+                                                /* BARRE DE NAVIGATION */
 
 .navigation {
     text-align: right;
@@ -38,7 +39,7 @@ li>a {
 }
 
 
-/* Logo */
+                                                    /* LOGO */
 
 .logo {
     margin-top: 2%;
@@ -62,7 +63,7 @@ li>a {
 }
 
 
-/* Texte de description */
+                                            /* TEXTES DE DESCRIPTION */
 
 .texte_description_site {
     padding-inline: 15%;
@@ -81,36 +82,18 @@ p {
 /* Vidéo de présentation */
 
 .video_presentation {
-    padding: 35px;
-    padding-bottom: 50px;
-    text-align: center;
+    margin-top: 30px;
+      text-align: center;
 }
 
 .video_presentation>video {
     border: solid 2px black;
     border-radius: 15px;
-    min-height: 200px;
-    min-width: 200px;
-    max-width: 600px;
-    max-height: 300px;
-    position: relative;
 }
 
 
-/* footer */
 
-.footer {
-    padding: 0.1%;
-    background-color: rgb(189, 189, 189);
-    padding-left: 5%;
-}
-
-.footer>p {
-    font-size: xx-small;
-}
-
-
-/* objets graphiques */
+                                            /* OBJETS GRAPHIQUES */
 
 .rectangle_blanc {
     /* Contient le titre et des composants graphiques*/
@@ -170,4 +153,25 @@ p {
     left: 5%;
     text-decoration: none;
     color: rgba(4, 139, 139, 0.76);
+}
+
+
+
+                                            /* FOOTER */
+
+footer {
+    margin-top: 50px;
+    background-color: rgb(189, 189, 189); 
+    display: flex;                              /* Pour mettre les éléments au centre */
+    flex-direction: column;
+}
+
+footer>p {
+    font-size: 10px;
+}
+
+.footer-absolute{
+    position: absolute;                        /* Pour positionner le footer en bas de la page quand la page n'est pas remplis */
+    bottom: 0;
+    width: 100%;
 }
