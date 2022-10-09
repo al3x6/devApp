@@ -1,17 +1,29 @@
 * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /*On met à 0 pour que la barre de naviation soit bien collée en haut de la page*/
     /*Et le footer en bas */
 }
 
 body {
     background-color: rgb(181, 224, 253);
+    height: 100vh;
+    /* Prends toute la hauteur de la page */
+    display: flex;
+    /* Modifier les dimensions afin de remplir l'espace disponible */
+    flex-direction: column;
+    /* On met en colonne les éléments contenu dans le body */
+}
+
+.contenu {
+    /*Contenu de la page*/
+    flex: 1;
+    /* grow : Grossir jusqu'à prendre tout l'espace disponible */
 }
 
 
-                                                /* BARRE DE NAVIGATION */
+/* BARRE DE NAVIGATION */
 
 .navigation {
     text-align: right;
@@ -31,7 +43,7 @@ li>a {
     text-decoration: none;
 }
 
-.menu_navigation {
+.modules_navigation {
     text-align: center;
     background-color: rgb(42, 122, 187);
     padding: 1%;
@@ -39,7 +51,7 @@ li>a {
 }
 
 
-                                                    /* LOGO */
+/* Logo */
 
 .logo {
     margin-top: 2%;
@@ -63,7 +75,7 @@ li>a {
 }
 
 
-                                            /* TEXTES DE DESCRIPTION */
+/* Texte de description */
 
 .texte_description_site {
     padding-inline: 15%;
@@ -78,22 +90,44 @@ p {
     text-align: center;
 }
 
+h2,
+h4 {
+    margin: 2%;
+    text-align: center;
+}
+
 
 /* Vidéo de présentation */
 
 .video_presentation {
-    margin-top: 30px;
-      text-align: center;
+    padding: 35px;
+    padding-bottom: 50px;
+    text-align: center;
 }
 
 .video_presentation>video {
     border: solid 2px black;
     border-radius: 15px;
+    min-height: 200px;
+    min-width: 200px;
+    max-width: 600px;
+    max-height: 300px;
+    position: relative;
 }
 
 
+/* footer */
 
-                                            /* OBJETS GRAPHIQUES */
+footer {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5%;
+    background-color: rgb(189, 189, 189);
+    font-size: xx-small;
+}
+
+
+/* objets graphiques */
 
 .rectangle_blanc {
     /* Contient le titre et des composants graphiques*/
@@ -130,7 +164,7 @@ p {
 
 .textfield {
     /* Zone de texte pour l'utilisateur */
-    border: 0px;
+    border: none;
     background-color: rgb(202, 202, 202);
     color: black;
     padding: 5%;
@@ -155,23 +189,70 @@ p {
     color: rgba(4, 139, 139, 0.76);
 }
 
-
-
-                                            /* FOOTER */
-
-footer {
-    margin-top: 50px;
-    background-color: rgb(189, 189, 189); 
-    display: flex;                              /* Pour mettre les éléments au centre */
-    flex-direction: column;
+.photo_crayon {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 3%;
+    bottom: 20%;
 }
 
-footer>p {
-    font-size: 10px;
+
+/* Module de prababilité */
+
+.Module_proba {
+    margin: auto;
+    width: 600px;
+    height: 500px;
+    text-align: center;
+    margin-top: 5%;
 }
 
-.footer-absolute{
-    position: absolute;                        /* Pour positionner le footer en bas de la page quand la page n'est pas remplis */
-    bottom: 0;
-    width: 100%;
+.Proba_valeurs table {
+    margin: auto;
+    width: 75%;
+    height: 100px;
+    padding-top: 5%;
+}
+
+.Proba_valeurs td {
+    margin-top: 50%;
+}
+
+.Proba_valeurs td:nth-child(2n+1) {
+    text-align: right;
+    padding-right: 5px;
+}
+
+.Proba_valeurs td:nth-child(2n) {
+    text-align: left;
+}
+
+.Proba_input_text {
+    border: none;
+    width: 50px;
+}
+
+.Proba_Resultat {
+    margin: auto;
+    margin-top: 20%;
+    margin-inline: 5%;
+}
+
+.Proba_div_TextArea {
+    margin-inline: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Proba_TextArea {
+    border: none;
+}
+
+.Proba_p {
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
 }
