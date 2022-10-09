@@ -9,8 +9,6 @@
     <!-- Permet au navigateur de traduire en une autre langue le site -->
     <meta name="author" content="Antoine Bazire">
     <!-- Nom de l'auteur du site -->
-
-
     <link rel="shortcut icon" href="Images/SimFast_logo.png" type="image/x-icon">
     <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
     <link rel="stylesheet" href="style.css">
@@ -18,44 +16,45 @@
 </head>
 
 <body>
-    <div class='navigation'>
-        <nav>
-            <ul>
-                <li><a href='SimFast-Profil.html'>Profile</a></li>
-                <li><a href='SimFast-Accueil.html'>Se déconnecter</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class='menu_navigation'>
-        <img class="logo_miniature" src="Images/SimFast_logo.png" alt="SimFast_logo">
-        <nav>
-            <ul>
-                <li><a href='Module_maths.html'>Simulation mathématiques</a></li>
-                <li><a href='Module_informatique.html'>Simulation informatique</a></li>
-                <li><a href='Module_lorem.html'>Simulation lorem</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="rectangle_blanc">
-        <h3>PROFIL</h3>
-        <form action="" method="post">
+    <div class="contenu">
+
+        <div class='navigation'>
+            <nav>
+                <ul>
+                    <li><a href='SimFast-Profil.html'>Profil</a></li>
+                    <li><a href='SimFast-Accueil.html'>Se déconnecter</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class='modules_navigation'>
+            <a href="SimFast-Menu.html" title="Aller au menu">
+                <img class="logo_miniature" src="Images/SimFast_logo.png" alt="SimFast_logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href='SimFast-Module_Probabilite.html'>Calculateur de loi normale</a></li>
+                    <li><a href='SimFast-Module_informatique.html'>Simulation informatique</a></li>
+                    <li><a href='SimFast-Module_lorem.html'>Simulation lorem</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="rectangle_blanc">
+            <h3>PROFIL</h3>
             <div class="content">
-                <input class="textfield" type="text" name="login" placeholder="Nom d'utilisateur / Adresse email">
+                <input class="textfield" type="text" name="login" placeholder="Nom d'utilisateur">
                 <br>
                 <input class="textfield" type="text" name="login" placeholder="Adresse email">
                 <br>
                 <input class="textfield" type="password" name="mdp" placeholder="Mot de passe">
+                <a href="SimFast-Changer_mdp.html" title="Changer de mot de passe">
+                    <img class="photo_crayon" src="Images/crayon.png" alt="photo_crayon">
+                </a>
             </div>
-        </form>
+        </div>
     </div>
-    <footer class="footer-absolute">
-        <p>
-            © 2022 - SimFast - TOUS DROITS RÉSERVÉS - PHOTOS NON CONTRACTUELLES - ALL RIGHTS RESERVED.
-        </p>
+    <footer>
+        © 2022 - SimFast - TOUS DROITS RÉSERVÉS - PHOTOS NON CONTRACTUELLES - ALL RIGHTS RESERVED.
     </footer>
-
-
-
 
 </body>
 
