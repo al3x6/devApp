@@ -1,6 +1,9 @@
 * {
+    /* * = toutes les balises, classe, objets */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Changement de la police de charactères */
     margin: 0;
+    /* marge autour de l'objet */
     padding: 0;
     /*On met à 0 pour que la barre de naviation soit bien collée en haut de la page*/
     /*Et le footer en bas */
@@ -8,18 +11,19 @@
 
 body {
     background-color: rgb(181, 224, 253);
+    /* Change la couleurs de fond */
     height: 100vh;
     /* Prends toute la hauteur de la page */
     display: flex;
     /* Modifier les dimensions afin de remplir l'espace disponible */
     flex-direction: column;
-    /* On met en colonne les éléments contenu dans le body */
+    /* Enfants de la balise alignés en colonne */
 }
 
 .contenu {
     /*Contenu de la page*/
     flex: 1;
-    /* grow : Grossir jusqu'à prendre tout l'espace disponible */
+    /* grow : Grossir jusqu'à prendre toute l'espace disponible */
 }
 
 
@@ -27,42 +31,75 @@ body {
 
 .navigation {
     text-align: right;
+    /* Alignement du texte à droite */
     background-color: white;
 }
 
 nav>ul>li {
     display: inline-block;
+    /* Affichage en block sur une ligne */
     list-style: none;
+    /* On enleve les points devant le texte des <li> */
     padding: 8px;
+    /* Espace entre sa bordure et le texte, toutes directions*/
     padding-inline-end: 40px;
+    /* ------------------------------------, en ligne et à la fin (à droite) */
     font-size: large;
+    /* Grossir la police */
 }
 
 li>a {
     color: black;
+    /* Couleur du texte en noire */
     text-decoration: none;
+    /* Pas de décoration de texte (par défaut: souligné) */
 }
 
 .modules_navigation {
     text-align: center;
+    /* Alignement central du texte*/
     background-color: rgb(42, 122, 187);
-    padding: 1%;
+    padding-top: 1%;
+    /* Espace entre la bordure du haut et le texte */
+    padding-bottom: 1%;
+    /* -------------------------- bas -------------*/
+    padding-inline: 12%;
+    /* ------------ le texte et les bordures gauche et droite  */
     margin-bottom: 2%;
+    /* Marge entre sa bordure du bas et la bordure du bas de la balise, classe parent */
+}
+
+.modules_navigation ul {
+    /* Position des noms de modules dans la barre de module_navigation */
+    display: flex;
+    flex-direction: row;
+    /* Alignement des enfants en ligne */
+    justify-content: space-between;
+    /* Même espace écartant les enfants */
+    justify-content: space-around;
+    /* Même espace entourant les enfants */
 }
 
 
 /* Logo */
 
 .logo {
+    /* <div> du logo */
     margin-top: 2%;
+    /* marge entre sa bordure du haut et la bordure de la balise, classe parent  */
     text-align: center;
 }
 
 .logo>img {
+    /* Image du logo */
     max-width: 200px;
-    max-width: 200px;
+    /* Largeur maximum 200 pixels */
+    max-height: 200px;
+    /* Hauteur maximum 200 pixels */
     border-radius: 15px;
+    /* Arondissement des bords de 15 pixels */
     filter: drop-shadow(7px 7px 4px rgb(109, 108, 108))
+    /* Ombre de decalage-x, decalage-y, rayon-flou, couleur */
 }
 
 .logo_miniature {
@@ -71,7 +108,9 @@ li>a {
     border-radius: 50px;
     filter: drop-shadow(4px 3px 1px rgba(12, 12, 12, 0.445));
     position: absolute;
+    /* Permet de positionner l'élément avec top, right, bottom et left dans son bloc parent */
     left: 5%;
+    /* Décalage de 5% en par rapport à la bordure gauche du parent */
 }
 
 
@@ -96,23 +135,31 @@ h4 {
     text-align: center;
 }
 
+.Titre_module {
+    text-align: center;
+    margin-top: 5%;
+}
+
 
 /* Vidéo de présentation */
 
 .video_presentation {
+    /* <div> de la vidéo */
     padding: 35px;
     padding-bottom: 50px;
     text-align: center;
 }
 
 .video_presentation>video {
+    /* Vidéo */
     border: solid 2px black;
     border-radius: 15px;
     min-height: 200px;
+    /* Hauteur minimum */
     min-width: 200px;
+    /* Largeur minimum */
     max-width: 600px;
     max-height: 300px;
-    position: relative;
 }
 
 
@@ -124,6 +171,7 @@ footer {
     padding-left: 5%;
     background-color: rgb(189, 189, 189);
     font-size: xx-small;
+    /* Petite police d'écriture */
 }
 
 
@@ -149,8 +197,8 @@ footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.content {
-    /* Est contenu dans le rectangle blanc, et contient les textfields */
+.rectangle_blanc_content {
+    /* Contenu du rectangle blanc, et contient les textfields */
     min-height: 280px;
     width: 75%;
     margin-top: 5%;
@@ -199,9 +247,12 @@ footer {
 }
 
 .crayon {
+    /* ✏️ */
     position: absolute;
     right: 4%;
+    /* Ecartement de 4% entre l'élément et la bordure droite du parent */
     bottom: 17%;
+    /* ------------- 17% ---------------------------- du bas --------- */
     text-decoration: none;
 }
 
@@ -256,6 +307,8 @@ footer {
 
 .Proba_TextArea {
     border: none;
+    resize: none;
+    /* L'utilisateur ne peut pas redimentionner */
 }
 
 .Proba_p {
@@ -288,6 +341,7 @@ footer {
 }
 
 .Conversion_reverse {
+    /* ⇆ */
     border: none;
     background-color: rgb(181, 224, 253);
 }
@@ -305,4 +359,129 @@ footer {
     filter: drop-shadow(-0.5px 2px 1.5px rgb(109, 108, 108, 0.7));
     pointer-events: none;
     /* Zone de texte non modifiable par l'utilisateur */
+}
+
+
+/* Module d'amortissement */
+
+.Module_Amortissement {
+    text-align: center;
+    margin: 5%;
+}
+
+.Amortissement_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 300px;
+}
+
+.Amortissement_input {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.Amortissement_input td {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.Amortissement_input td:nth-child(2n+1) {
+    text-align: left;
+    padding-right: 20px;
+}
+
+.Amortissement_textfiel_input {
+    border: none;
+    width: 60%;
+    min-width: 50px;
+    height: 30px;
+}
+
+.Amortissement_output {
+    width: 35%;
+    min-width: 250px;
+}
+
+.Amortissement_TextArea {
+    border: none;
+    height: 82%;
+    width: 100%;
+    resize: none;
+}
+
+
+/* Gestion des utilisateurs */
+
+.Table_gestion_utilisateurs {
+    margin: 5%;
+}
+
+.Table_gestion_utilisateurs table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.Table_gestion_utilisateurs th {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.Table_gestion_utilisateurs>table,
+.Table_gestion_utilisateurs th,
+.Table_gestion_utilisateurs tr,
+.Table_gestion_utilisateurs td {
+    border: solid 1px black;
+    background-color: white;
+    /* Bordure fusionnées */
+    text-align: center;
+}
+
+.gestion_bouton_supprimer {
+    margin-inline: 5%;
+    text-align: right;
+}
+
+.Valide_suppression {
+    width: 15%;
+    min-width: 100px;
+    padding-bottom: 0.3%;
+    text-align: center;
+    font-size: large;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background-color: rgba(253, 60, 60, 0.8);
+}
+
+
+/* Statistiques */
+
+.Statistiques_content {
+    margin: 5%;
+    height: 400px;
+}
+
+.Statistiques_graphe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: space-around;
+    height: 80%;
+}
+
+.Statistiques_content textarea {
+    width: 35%;
+    resize: none;
+    border: none;
+}
+
+.Statistiques_p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: space-around;
 }
