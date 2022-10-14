@@ -129,13 +129,8 @@ p {
     text-align: center;
 }
 
-h2,
-h4 {
-    margin: 2%;
-    text-align: center;
-}
-
 .Titre_module {
+    /* Titres des modules */
     text-align: center;
     margin-top: 5%;
 }
@@ -257,9 +252,20 @@ footer {
 }
 
 
+/* Mot de passe oublie */
+
+.Mdp_oublie h2,
+h4 {
+    /* Titre contenu que dans Mdp_oublie */
+    margin: 2%;
+    text-align: center;
+}
+
+
 /* Module de prababilité */
 
 .Module_proba {
+    /* Contenu du module */
     margin: auto;
     width: 600px;
     height: 500px;
@@ -268,6 +274,7 @@ footer {
 }
 
 .Proba_valeurs table {
+    /* Bloc contenant les valeurs à rentrer pour l'utilisateur */
     margin: auto;
     width: 75%;
     height: 100px;
@@ -275,30 +282,36 @@ footer {
 }
 
 .Proba_valeurs td {
+    /* Champs valeur 1,2,3,4 et zones de texte  */
     margin-top: 50%;
 }
 
 .Proba_valeurs td:nth-child(2n+1) {
+    /* Cellules impairs des lignes (Valeur 1, 2, 3, 4) */
     text-align: right;
     padding-right: 5px;
 }
 
 .Proba_valeurs td:nth-child(2n) {
+    /* Cellules pairs des lignes (zones de texte */
     text-align: left;
 }
 
 .Proba_input_text {
+    /* Zones de texte */
     border: none;
     width: 50px;
 }
 
 .Proba_Resultat {
+    /* Bloc contenant les <textarea> et les <p> */
     margin: auto;
     margin-top: 20%;
     margin-inline: 5%;
 }
 
 .Proba_div_TextArea {
+    /* Bloc contenant les <textarea> */
     margin-inline: 3%;
     display: flex;
     flex-direction: row;
@@ -306,12 +319,14 @@ footer {
 }
 
 .Proba_TextArea {
+    /* <Textarea> */
     border: none;
     resize: none;
     /* L'utilisateur ne peut pas redimentionner */
 }
 
 .Proba_p {
+    /* Paragraphes sous les <textarea> */
     font-size: small;
     display: flex;
     flex-direction: row;
@@ -322,16 +337,19 @@ footer {
 /* Module Conversion */
 
 .Module_Conversion {
+    /* Contenu du module */
     margin-inline: 10%;
     text-align: center;
     margin-top: 5%;
 }
 
 .Conversion_Input {
+    /* Bloc contenant les balises selects */
     padding: 5%;
 }
 
 .input_select {
+    /* Combobox décimal, hexadécimal et binaire */
     border: solid 1px black;
     width: 30%;
     border-radius: 5px;
@@ -347,11 +365,13 @@ footer {
 }
 
 .Conversion_output {
+    /* Bloc conentant les zones de textes */
     width: 60%;
     margin-inline: auto;
 }
 
 .Conversion_output .output_valeurs {
+    /* Zones de texte */
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     border: none;
@@ -365,11 +385,13 @@ footer {
 /* Module d'amortissement */
 
 .Module_Amortissement {
+    /* Contenu du module */
     text-align: center;
     margin: 5%;
 }
 
 .Amortissement_content {
+    /* Contenu comprenant les entrées et les sorties, mais pas la titre comme .Module_Amortissement */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -377,6 +399,7 @@ footer {
 }
 
 .Amortissement_input {
+    /* Bloc contenant une table d'entrées pour l'utilisateur */
     display: flex;
     flex-direction: column;
     margin-left: 10%;
@@ -385,16 +408,19 @@ footer {
 }
 
 .Amortissement_input td {
+    /* Cellules de la table des entrées */
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
 .Amortissement_input td:nth-child(2n+1) {
+    /* Cellules impaires (Informations) */
     text-align: left;
     padding-right: 20px;
 }
 
 .Amortissement_textfiel_input {
+    /* Zones de texte dans la table */
     border: none;
     width: 60%;
     min-width: 50px;
@@ -402,11 +428,13 @@ footer {
 }
 
 .Amortissement_output {
+    /* Bloc contenant le titre "Estimation" et le <textarea> */
     width: 35%;
     min-width: 250px;
 }
 
 .Amortissement_TextArea {
+    /* Bloc contenant <textarea> */
     border: none;
     height: 82%;
     width: 100%;
@@ -417,15 +445,18 @@ footer {
 /* Gestion des utilisateurs */
 
 .Table_gestion_utilisateurs {
+    /* Contenu de la page sous la barre de navigation */
     margin: 5%;
 }
 
 .Table_gestion_utilisateurs table {
+    /* Table */
     width: 100%;
     border-collapse: collapse;
 }
 
 .Table_gestion_utilisateurs th {
+    /* Entête de la table*/
     padding-top: 1%;
     padding-bottom: 1%;
 }
@@ -434,6 +465,7 @@ footer {
 .Table_gestion_utilisateurs th,
 .Table_gestion_utilisateurs tr,
 .Table_gestion_utilisateurs td {
+    /* Table, entête, lignes, cellules */
     border: solid 1px black;
     background-color: white;
     /* Bordure fusionnées */
@@ -441,11 +473,13 @@ footer {
 }
 
 .gestion_bouton_supprimer {
+    /* Bloc du bouton supprimer */
     margin-inline: 5%;
     text-align: right;
 }
 
 .Valide_suppression {
+    /* Bouton supprimer */
     width: 15%;
     min-width: 100px;
     padding-bottom: 0.3%;
@@ -461,11 +495,13 @@ footer {
 /* Statistiques */
 
 .Statistiques_content {
+    /* Contenu de la page sous la barre de navigation */
     margin: 5%;
     height: 400px;
 }
 
 .Statistiques_graphe {
+    /* Bloc contenant les <textarea> */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -473,13 +509,15 @@ footer {
     height: 80%;
 }
 
-.Statistiques_content textarea {
+.Statistiques_graphe textarea {
+    /* <textarea> */
     width: 35%;
     resize: none;
     border: none;
 }
 
 .Statistiques_p {
+    /* Paragraphes sous les <textarea> */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
