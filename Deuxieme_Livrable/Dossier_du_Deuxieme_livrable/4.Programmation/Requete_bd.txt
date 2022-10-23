@@ -1,0 +1,16 @@
+------------------------Formulaire de connexion---------
+select mdp from utilisateur where log='" . $login . "'
+--pour récuperer le mot de passe du login entré dans le formulaire de connexion
+--et voir si il existe le mot de passe dans la base de donnée ou le mot de passe sera hash
+
+--------------------Formulaire d'inscription-------------
+insert into utilisateur(log,email,mdp) values('$log','$email','$mdp')
+--pour inserer dans la base de donner à partir des données entrer dans le formulaire
+--d'inscription le login et le mot de passe, ainsi que l'email
+
+--------------------Formulaire changement de mot de passe-------------
+update utilisateur set $ancienmdp=$nouveaumdp where log='$log'
+--On échange l'ancien mot de passe avec le nouveau mot de passe d'un utilisateur
+--dans le formulaire changement de mot de passe qui aura un mot de passe changer avec
+--la confirmation du mot de passe changer
+
