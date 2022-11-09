@@ -1,16 +1,38 @@
-------------------------Formulaire de connexion---------
+------------------------Inserer un module dans la base de donner---------
+INSERT INTO `module` (`nom_module`) VALUES ($nom_module);
+--Inserer un nouveau module dans la base de données
+
+------------------------Vérifier le login et mot de passe---------
 select mdp from utilisateur where log='" . $login . "'
 --pour récuperer le mot de passe du login entré dans le formulaire de connexion
 --et voir si il existe le mot de passe dans la base de donnée ou le mot de passe sera hash
 
---------------------Formulaire d'inscription-------------
-insert into utilisateur(log,email,mdp) values('$log','$email','$mdp')
+--------------------Inserer un nouvel utilisateur-------------
+INSERT INTO `utilisateur` (`login`, `email`, `mdp`) VALUES ($login, $email, $mdp);
 --pour inserer dans la base de donner à partir des données entrer dans le formulaire
 --d'inscription le login et le mot de passe, ainsi que l'email
 
---------------------Formulaire changement de mot de passe-------------
-update utilisateur set $ancienmdp=$nouveaumdp where log='$log'
---On échange l'ancien mot de passe avec le nouveau mot de passe d'un utilisateur
+--------------------Changement de mot de passe-------------
+UPDATE `utilisateur` SET `mdp` = '$mdp' WHERE `utilisateur`.`login` = '$login';
+--On change l'ancien mot de passe par le nouveau mot de passe d'un utilisateur
 --dans le formulaire changement de mot de passe qui aura un mot de passe changer avec
---la confirmation du mot de passe changer
+--la confirmation du mot de passe changé
 
+--------------------Insertion d'une visite du site-------------
+INSERT INTO `stats_visite` (`id_visite`, `date`) VALUES (NULL, current_timestamp());
+--Si il y a une connexion sur le site on mettra la date de la visite dans la base de données
+
+--------------------Insertion d'une connexion d'un utilisateur dans un module-------------
+INSERT INTO `historique` (`id_historique`, `login`, `nom_module`, `historique_date`) VALUES (NULL, $login, $nom_module, current_timestamp());
+--Quand l'utilisateur lance un module la base de données enregistre le login, le module et la date
+
+--------------------Voir les utilisateurs inscrient-------------
+SELECT login FROM `utilisateur`;
+--Dans la page gestion_utilisateur le gestionnaire verra la liste des utilisateur
+
+--------------------Supprimer un utilisateur de la base de données-------------
+DELETE FROM `utilisateur` WHERE login = '$login';
+--Dans la page gestion_utilisateur, le gestionnaire peut supprimer un utilisateur
+
+--------------------Compter le nombre de utilisateur  -------------
+SELECT nom_module,COUNT(id_historique) from historique GROUP BY nom_module;
