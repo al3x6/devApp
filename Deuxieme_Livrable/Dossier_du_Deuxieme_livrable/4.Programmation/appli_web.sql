@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.0.4deb2+deb11u1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le : mer. 09 nov. 2022 à 10:55
--- Version du serveur : 10.4.24-MariaDB
--- Version de PHP : 8.1.6
+-- Hôte : localhost:3306
+-- Généré le : jeu. 10 nov. 2022 à 10:09
+-- Version du serveur :  10.5.15-MariaDB-0+deb11u1
+-- Version de PHP : 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,8 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `appli_web`
+-- Base de données : `SIMFAST`
 --
+CREATE DATABASE IF NOT EXISTS `SIMFAST` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `SIMFAST`;
 
 -- --------------------------------------------------------
 
@@ -39,7 +41,10 @@ CREATE TABLE `historique` (
 --
 
 INSERT INTO `historique` (`id_historique`, `login`, `nom_module`, `historique_date`) VALUES
-(1, 'user', 'proba', '2022-11-09 10:19:07');
+(2, 'etude', 'amortissement', '2022-11-10 09:29:18'),
+(3, 'user', 'conversion', '2022-11-10 09:29:18'),
+(4, 'user', 'amortissement', '2022-11-10 09:29:18'),
+(5, 'log', 'probabilite', '2022-11-10 09:29:18');
 
 -- --------------------------------------------------------
 
@@ -56,7 +61,9 @@ CREATE TABLE `module` (
 --
 
 INSERT INTO `module` (`nom_module`) VALUES
-('proba');
+('amortissement'),
+('conversion'),
+('probabilite');
 
 -- --------------------------------------------------------
 
@@ -107,6 +114,8 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`login`, `email`, `mdp`) VALUES
+('etude', 'etude@etude.fr', 'mpd_etude'),
+('log', 'log@log.com', 'mdp_log'),
 ('user', 'user@user.fr', 'mdp');
 
 --
@@ -155,7 +164,7 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `historique`
 --
 ALTER TABLE `historique`
-  MODIFY `id_historique` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_historique` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `stats_module`
