@@ -1,0 +1,43 @@
+<!Doctype html>
+<html lang="fr">
+
+<head>
+
+    <title>SimFast - Changer de mot de passe</title>
+    <!-- Titre de la page -->
+    <meta charset="utf-8">
+    <!-- Permet au navigateur de traduire en une autre langue le site -->
+    <meta name="author" content="Antoine Bazire">
+    <!-- Nom de l'auteur du site -->
+    <link rel="shortcut icon" href="Images/SimFast_logo.png" type="image/x-icon">
+    <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="contenu">
+
+        <div class="logo">
+            <img src="Images/SimFast_logo.png" alt="SimFast_logo">
+        </div>
+
+        <div class="rectangle_blanc">
+            <h3>Changer de mot de passe</h3>
+            <form action="SimFast-Profil.php" method="post">
+                <div class="rectangle_blanc_content">
+                    <input class="textfield" type="password" name="mdp" placeholder="Nouveau mot de passe">
+                    <br>
+                    <input class="textfield" type="password" name="mdp_confirme" placeholder="Confirmation mot de passe">
+                    <br>
+                    <input class="bouton_submit" type="submit" name="Valider" value="Valider">
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        © 2022 - SimFast - TOUS DROITS RÉSERVÉS - PHOTOS NON CONTRACTUELLES - ALL RIGHTS RESERVED.
+    </footer>
+</body>
+
+</html>
