@@ -83,14 +83,14 @@ li>a {
 
 /* Logo */
 
-.logo {
+.logo{
     /* <div> du logo */
     margin-top: 2%;
     /* marge entre sa bordure du haut et la bordure de la balise, classe parent  */
     text-align: center;
 }
 
-.logo>img {
+.logo>img,.logo>a>img{
     /* Image du logo */
     max-width: 200px;
     /* Largeur maximum 200 pixels */
@@ -210,8 +210,12 @@ footer {
     background-color: rgb(202, 202, 202);
     color: black;
     padding: 4%;
+
 }
 
+.unmodifiable{
+    pointer-events:none;
+}
 .bouton_submit {
     /* Bouton Valider */
     border: 0px;
@@ -239,6 +243,23 @@ footer {
     /* Oublie de mot de passe */
     text-decoration: none;
     color: rgb(5, 189, 189);
+}
+
+.error{
+    /*Variable d'erreur*/
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+.success{
+    /*Variable d'erreur*/
+    font-weight: bold;
+    color: green;
+    text-align: center;
+}
+
+.redirection:hover{
+    text-decoration: underline;
 }
 
 .crayon {

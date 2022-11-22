@@ -29,9 +29,11 @@
                 </ul>
             </nav>
         </div>
+
         <div class='logo'>
             <img src="Images/SimFast_logo.png" alt="SimFast_logo">
         </div>
+
         <div class='texte_description_site'>
             <h3>Bienvenue !</h3>
             <p>Simfast (ou Calsim) est une application web permettant à ses utilisateurs d'effectuer des simulations de calculs facilement et rapidement ! Une fois inscrit (situé en haut a droite de la page) vous pourrez profiter de toutes les fonctionnalité
@@ -44,7 +46,7 @@
         </div>
     </div>
     <footer>
-        © 2022 - SimFast - TOUS DROITS RÉSERVÉS - PHOTOS NON CONTRACTUELLES - ALL RIGHTS RESERVED.
+        <?php include 'Footer.php'; ?>
     </footer>
 </body>
 

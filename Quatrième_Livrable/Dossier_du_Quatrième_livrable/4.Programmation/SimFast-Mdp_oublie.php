@@ -16,7 +16,9 @@
 <body>
     <div class="contenu">
         <div class='logo'>
-            <img src="Images/SimFast_logo.png" alt="SimFast_logo">
+            <a href="SimFast-Accueil.php" title="Aller au menu">
+                <img src="Images/SimFast_logo.png" alt="SimFast_logo">
+            </a>
         </div>
         <div class="Mdp_oublie">
             <h2>Oups !</h2>
@@ -24,7 +26,7 @@
         </div>
     </div>
     <footer>
-        © 2022 - SimFast - TOUS DROITS RÉSERVÉS - PHOTOS NON CONTRACTUELLES - ALL RIGHTS RESERVED.
+        <?php include 'Footer.php'; ?>
     </footer>
 </body>
 
