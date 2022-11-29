@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php session_start();
+include '../Config/database.php';
+global $db;
+?>
 
 
 <!Doctype html>
@@ -35,7 +38,10 @@
         <div class="Titre_module">
             <h3>Gérer les utilisateurs</h3>
         </div>
-        <form action="" method="post">
+
+        <h1><?php if(isset($_SESSION['status'])){echo $_SESSION['status']; unset($_SESSION['status']);}?></h1>
+
+        <form action="Suppression.php" method="post">
             <div class="Table_gestion_utilisateurs">
                 <table>
                     <tr>
@@ -44,35 +50,22 @@
                         <th>Historique</th>
                         <th>Supprimer</th>
                     </tr>
+                    <?php
+                    $req=$db->prepare("SELECT * FROM utilisateur");
+                    $req->execute();
+                    while($resultat = $req->fetch(PDO::FETCH_ASSOC)): ?> <!-- On créer des colonnes tant qu'il y a des utilisateurs -->
                     <tr>
-                        <td>login 1</td>
-                        <td>email 1</td>
+                        <td><?= $resultat['login']?></td>
+                        <td><?= $resultat['email']?></td>
                         <td>dernier module utilisé</td>
-                        <td><input name="utilisateur_supprimer" type="checkbox"></td>
+                        <td><input type="checkbox" name="uSuppression[]" value="<?= $resultat['login']?>"></td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input name="utilisateur_supprimer" type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input name="utilisateur_supprimer" type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input name="utilisateur_supprimer" type="checkbox"></td>
-                    </tr>
+                    <?php endwhile ?>
                 </table>
             </div>
 
             <div class="gestion_bouton_supprimer">
-                <input class="Valide_suppression" type="submit" name="Valide_suppression" value="Supprimer">
+                <input class="Valide_suppression" type="submit" name="suppression" value="Supprimer">
             </div>
 
         </form>
@@ -81,6 +74,13 @@
     <footer>
         <?php include '../Footer.php'; ?>
     </footer>
+    <script>
+        function Deleteqry(id){
+            if(confirm("Etes-vous sûr de vouloir supprimer cette annonce ?")==true)
+                window.location="admin_accessoires.php?id_accessoire="+id;
+            return false;
+        }
+    </script>
 </body>
 
 </html>

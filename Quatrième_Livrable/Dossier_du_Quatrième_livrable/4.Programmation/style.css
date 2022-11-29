@@ -224,6 +224,7 @@ footer {
     margin-top: 5%;
     margin-inline: 25%;
     background-color: rgba(253, 54, 54, 0.459);
+    cursor: pointer;
 }
 
 .footer_rectangle_blanc {
