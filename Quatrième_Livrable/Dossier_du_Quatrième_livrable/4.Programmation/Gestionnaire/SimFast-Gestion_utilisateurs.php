@@ -77,7 +77,7 @@ global $db;
     <script>
         function Deleteqry(id){
             if(confirm("Etes-vous sûr de vouloir supprimer cette annonce ?")==true)
-                window.location="admin_accessoires.php?id_accessoire="+id;
+                window.location="admin_produit.php?id_produit="+id;
             return false;
         }
     </script>
