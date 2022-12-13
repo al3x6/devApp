@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : jeu. 10 nov. 2022 à 10:09
+-- Généré le : mar. 13 déc. 2022 à 12:14
 -- Version du serveur :  10.5.15-MariaDB-0+deb11u1
 -- Version de PHP : 7.4.30
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `SIMFAST`
 --
-CREATE DATABASE IF NOT EXISTS `SIMFAST` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `SIMFAST`;
 
 -- --------------------------------------------------------
 
@@ -106,7 +104,7 @@ INSERT INTO `stats_visite` (`id_visite`, `date`) VALUES
 CREATE TABLE `utilisateur` (
   `login` varchar(30) NOT NULL,
   `email` varchar(60) NOT NULL,
-  `mdp` varchar(30) NOT NULL
+  `mdp` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -114,9 +112,8 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`login`, `email`, `mdp`) VALUES
-('etude', 'etude@etude.fr', 'mpd_etude'),
-('log', 'log@log.com', 'mdp_log'),
-('user', 'user@user.fr', 'mdp');
+('admin', 'admin@gmail.com', '$2y$12$a2WBkbQfui1LFu62nE7KoeOQfZ6.YP42ddMjpIDCDPhr.2KQ6hZuG'),
+('alexis', 'alexis@gmail.com', '$2y$12$ZcAYabiq4CGNl2hcE60p1epTZlL0r0Cf9lkebqymhDHyXIka7q2X.');
 
 --
 -- Index pour les tables déchargées
@@ -127,7 +124,6 @@ INSERT INTO `utilisateur` (`login`, `email`, `mdp`) VALUES
 --
 ALTER TABLE `historique`
   ADD PRIMARY KEY (`id_historique`),
-  ADD KEY `login` (`login`),
   ADD KEY `nom_module` (`nom_module`);
 
 --
@@ -186,7 +182,6 @@ ALTER TABLE `stats_visite`
 -- Contraintes pour la table `historique`
 --
 ALTER TABLE `historique`
-  ADD CONSTRAINT `historique_ibfk_1` FOREIGN KEY (`login`) REFERENCES `utilisateur` (`login`),
   ADD CONSTRAINT `historique_ibfk_2` FOREIGN KEY (`nom_module`) REFERENCES `module` (`nom_module`);
 
 --
