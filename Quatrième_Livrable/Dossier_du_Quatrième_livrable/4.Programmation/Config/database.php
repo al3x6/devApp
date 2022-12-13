@@ -1,8 +1,8 @@
 <?php
     define('HOST','localhost');
-    define('DB_NAME','simfast');
+    define('DB_NAME','SIMFAST');
     define('USER','root');
-    define('PASS','');
+    define('PASS','q4ToTaeWRz3QHd3V');
 
     try{
         $db = new PDO("mysql:host=" . HOST . ";dbname=" . DB_NAME,USER,PASS);
