@@ -7,7 +7,6 @@
     padding: 0;
     /*On met à 0 pour que la barre de naviation soit bien collée en haut de la page*/
     /*Et le footer en bas */
-    /*box-sizing: border-box;*/
 }
 
 body {
@@ -393,7 +392,6 @@ h4 {
     margin-inline: auto;
 }
 
-
 .Conversion_output .output_valeurs {
     /* Zones de texte */
     padding-top: 0.5%;
@@ -401,21 +399,8 @@ h4 {
     border: none;
     width: 47%;
     filter: drop-shadow(-0.5px 2px 1.5px rgb(109, 108, 108, 0.7));
-}
-input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input number*/
-    -webkit-appearance: none;
-    margin: 0;
-    }
-
-.Conversion_output input[type="submit"] {
-    border: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 15px;
-    background-color: rgba(253, 54, 54, 0.459);
-    margin-top: 5px;
-    cursor: pointer;
+    pointer-events: none;
+    /* Zone de texte non modifiable par l'utilisateur */
 }
 
 

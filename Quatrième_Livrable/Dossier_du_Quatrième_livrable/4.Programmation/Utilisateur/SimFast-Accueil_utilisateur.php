@@ -39,7 +39,7 @@
 
         <div class='texte_description_site'>
             <h3>Bienvenue <?php if(isset($_SESSION["login"])){ echo $_SESSION["login"];} ?> !</h3>
-            <h4>Vous pouvez utiliser les modules disponibles sur Simfast à volonté.</h4>
+            <h4>Vous pouvez utiliser les modules disponibles sur Simfast (ou Calsim) à volonté.</h4>
         </div>
     </div>
 
