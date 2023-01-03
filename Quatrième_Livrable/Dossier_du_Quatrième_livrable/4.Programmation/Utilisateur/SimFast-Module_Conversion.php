@@ -1,4 +1,15 @@
-<?php session_start(); ?>
+<?php session_start();
+if(isset($_SESSION['login'])){
+    if (isset($_GET["numerotation"])){
+        $erreur= "Veuillez séléctionner deux numérotations différentes";
+    }
+    if (isset($_GET["binaire"])){
+        $erreur= "Veuillez entrer des valeurs valides";
+    }
+    if (isset($_GET["decimal"])){
+        $erreur= "Veuillez entrer des nombres";
+    }
+?>
 
 
 <!Doctype html>
@@ -37,25 +48,27 @@
             <h3>Conversion</h3>
         </div>
         <div class="Module_Conversion">
-            <form action="" method="post">
                 <div class="Conversion_Input">
-                    <select class="input_select">
-                        <option value="decimal">décimal</option>
-                        <option value="hexadecimal">hexadécimal</option>
-                        <option value="binaire">binaire</option>
-                    </select>
-                    <input class="Conversion_reverse" type="submit" name="reverse" value="⇆">
-                    <select class="input_select">
-                        <option value="decimal">décimal</option>
-                        <option value="hexadecimal" selected>hexadécimal </option>
-                        <option value="binaire">binaire</option>
-                    </select>
-                </div>
-                <div class="Conversion_output">
-                    <input class="output_valeurs" type="text" name="output_val1">
-                    <input class="output_valeurs" type="text" name="output_val2">
-                </div>
-            </form>
+                    <form action="conversion.php" method="post">
+                        <select class="input_select" name="choix_conversion1">
+                            <option value="decimal" <?php if(isset($_SESSION["choix1"]) && $_SESSION["choix1"] =="decimal"){ echo "selected";}?>>décimal</option>
+                            <option value="hexadecimal" <?php if(isset($_SESSION["choix1"]) && $_SESSION["choix1"] =="hexadecimal"){ echo "selected";}?>>hexadécimal</option>
+                            <option value="binaire" <?php if(isset($_SESSION["choix1"]) && $_SESSION["choix1"] =="binaire"){ echo "selected";}?>>binaire</option>
+                        </select>
+                        <input class="Conversion_reverse" type="submit" name="reverse" value="⇆">
+                            <select class="input_select" name="choix_conversion2">
+                                <option value="decimal" <?php if(isset($_SESSION["choix2"]) && $_SESSION["choix2"] =="decimal"){ echo "selected";}?> >décimal</option>
+                                <option value="hexadecimal" <?php if(isset($_SESSION["choix2"]) && $_SESSION["choix2"] =="hexadecimal"){ echo "selected";}?>>hexadécimal </option>
+                                <option value="binaire" <?php if(isset($_SESSION["choix2"]) && $_SESSION["choix2"] =="binaire"){ echo "selected";}?>>binaire</option>
+                            </select>
+                    </div>
+                    <div class="Conversion_output">
+                        <input class="output_valeurs" type="text" name="output_val" value="<?php if(isset($_SESSION["valeur"])){ echo $_SESSION["valeur"];}?>">
+                        <input class="output_valeurs unmodifiable" type="text" value="<?php if(isset($_GET["conversion"])){ echo $_GET["conversion"];}?>">
+                        <input type="submit" value="convertir" name="convertir">
+                    </div>
+                    </form>
+            <p class="error"><?php if(isset($erreur)){echo $erreur;} ?></p>
         </div>
     </div>
     <footer>
@@ -64,3 +77,7 @@
 </body>
 
 </html>
+<?php }
+else{
+    header('Location: ../SimFast-Accueil_utilisateur.php');
+}

@@ -36,9 +36,9 @@
 
         <div class='texte_description_site'>
             <h3>Bienvenue !</h3>
-            <p>Simfast (ou Calsim) est une application web permettant à ses utilisateurs d'effectuer des simulations de calculs facilement et rapidement ! Une fois inscrit (situé en haut a droite de la page) vous pourrez profiter de toutes les fonctionnalité
-                de Simfast (ou Calsim) : Simuler des calculs d'amortissement pour vos projets, convertir des sommes en décimal,hexadécimal,binaire ou encore faire des calculs utilisant la Loi Normale.
-                <br><br> Si vous souhaitez vous faire une idée de ce qu'est Simfast (ou Calsim) vous pouvez visionner la vidéo de présentation ci-dessous. A bientôt !
+            <p>Simfast est une application web permettant à ses utilisateurs d'effectuer des simulations de calculs facilement et rapidement ! Une fois inscrit (situé en haut a droite de la page) vous pourrez profiter de toutes les fonctionnalité
+                de Simfast : Simuler des calculs d'amortissement pour vos projets, convertir des sommes en décimal,hexadécimal,binaire ou encore faire des calculs utilisant la Loi Normale.
+                <br><br> Si vous souhaitez vous faire une idée de ce qu'est Simfast vous pouvez visionner la vidéo de présentation ci-dessous. A bientôt !
             </p>
         </div>
         <div class="video_presentation">

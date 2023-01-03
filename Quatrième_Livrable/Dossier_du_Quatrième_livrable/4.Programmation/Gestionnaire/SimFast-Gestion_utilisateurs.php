@@ -1,6 +1,7 @@
 <?php session_start();
 include '../Config/database.php';
 global $db;
+if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
 ?>
 
 
@@ -53,14 +54,15 @@ global $db;
                     <?php
                     $req=$db->prepare("SELECT * FROM utilisateur");
                     $req->execute();
-                    while($resultat = $req->fetch(PDO::FETCH_ASSOC)): ?> <!-- On créer des colonnes tant qu'il y a des utilisateurs -->
-                    <tr>
-                        <td><?= $resultat['login']?></td>
-                        <td><?= $resultat['email']?></td>
-                        <td>dernier module utilisé</td>
-                        <td><input type="checkbox" name="uSuppression[]" value="<?= $resultat['login']?>"></td>
-                    </tr>
-                    <?php endwhile ?>
+                    while($resultat = $req->fetch(PDO::FETCH_ASSOC)): // On créer des colonnes tant qu'il y a des utilisateurs
+                        if ($resultat['login'] != "admin"){?>
+                            <tr>
+                                <td><?= $resultat['login']?></td>
+                                <td><?= $resultat['email']?></td>
+                                <td>dernier module utilisé</td>
+                                <td><input type="checkbox" name="uSuppression[]" value="<?= $resultat['login']?>"></td>
+                            </tr>
+                    <?php } endwhile ?>
                 </table>
             </div>
 
@@ -77,10 +79,14 @@ global $db;
     <script>
         function Deleteqry(id){
             if(confirm("Etes-vous sûr de vouloir supprimer cette annonce ?")==true)
-                window.location="admin_accessoires.php?id_accessoire="+id;
+                window.location="admin_produit.php?id_produit="+id;
             return false;
         }
     </script>
 </body>
 
 </html>
+<?php }
+else{
+    header('Location: ../SimFast-Accueil.php');
+}

@@ -1,21 +1,21 @@
 <?php
 session_start();
+if(isset($_SESSION['login'])){
+    if(isset($_GET["success"])){
+        $success = "Le mot de passe a été modifié";
+    }
 
-if(isset($_GET["success"])){
-    $success = "Le mot de passe a été modifié";
-}
+    if(isset($_GET["error0"])){
+        $err = "Veuillez remplir tous les champs";
+    }
 
-if(isset($_GET["error0"])){
-    $err = "Veuillez remplir tous les champs";
-}
+    if(isset($_GET["error1"])){
+        $err = "Vos de mots de passe ne correspondent pas !";
+    }
 
-if(isset($_GET["error1"])){
-    $err = "Vos de mots de passe ne correspondent pas !";
-}
-
-if(isset($_GET["error2"])){
-    $err = "Veuillez entrer un mot de passe différent du précédent";
-}
+    if(isset($_GET["error2"])){
+        $err = "Veuillez entrer un mot de passe différent du précédent";
+    }
 ?>
 
 <!Doctype html>
@@ -63,3 +63,7 @@ if(isset($_GET["error2"])){
 </body>
 
 </html>
+<?php }
+else{
+    header('Location: ../SimFast-Accueil_utilisateur.php');
+}

@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start();
+if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
+?>
 
 <!Doctype html>
 <html lang="fr">
@@ -46,3 +48,8 @@
 </body>
 
 </html>
+
+<?php }
+else{
+    header('Location: ../SimFast-Accueil.php');
+}

@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php session_start();
+if(isset($_SESSION['login'])){
+?>
+
 
 
 <!Doctype html>
@@ -57,3 +60,7 @@
 
 
 </html>
+<?php }
+else{
+    header('Location: ../SimFast-Accueil_utilisateur.php');
+}

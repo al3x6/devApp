@@ -3,7 +3,7 @@ session_start();
 include 'Config/database.php';
 global $db;
 
-if(!empty($_POST['login']) AND !empty($_POST['mdp'])){
+if (!empty($_POST['login']) and !empty($_POST['mdp'])) {
     $login = htmlspecialchars($_POST['login']);
     $mot_de_passe = htmlspecialchars($_POST['mdp']);
 
@@ -17,31 +17,30 @@ if(!empty($_POST['login']) AND !empty($_POST['mdp'])){
     $connexion->execute(['email' => $login]);
     $resultEmail = $connexion->fetch();  //Convertit le résultat en un tableau
 
-    if($resultLogin or $resultEmail){   // Crée la variable $result si l'utilisateur existe
-        if($resultLogin){
-            $result=$resultLogin;
-        }else{
-            $result=$resultEmail;
+    if ($resultLogin or $resultEmail) {   // Crée la variable $result si l'utilisateur existe
+        if ($resultLogin) {
+            $result = $resultLogin;
+        } else {
+            $result = $resultEmail;
         }
         $hashpassword = $result['mdp'];
-        if(password_verify($mot_de_passe, $hashpassword)){
-            echo "Connexion en cours";
-            if($login=="admin" or $login=="admin@gmail.com" ){
-                $_SESSION['login']= $result['login'];
+        if (password_verify($mot_de_passe, $hashpassword)) {
+            if ($login == "admin" or $login == "admin@gmail.com") {
+                $_SESSION['login'] = $result['login'];
                 header("Location: Gestionnaire/SimFast-Accueil_gestionnaire.php");
-            }
-            else{
-                $_SESSION['login']= $result['login'];
-                $_SESSION['email']= $result['email'];
+            } else {
+                $_SESSION['login'] = $result['login'];
+                $_SESSION['email'] = $result['email'];
                 header("Location: Utilisateur/SimFast-Accueil_utilisateur.php");
                 exit;
             }
-        }else{
+        } else {
             header('Location: SimFast-Connexion.php?error1');
-        }}else{
+        }
+    } else {
         header('Location: SimFast-Connexion.php?error1');
     }
-}else{
+} else {
     header('Location: SimFast-Connexion.php?error0');
 }
 ?>

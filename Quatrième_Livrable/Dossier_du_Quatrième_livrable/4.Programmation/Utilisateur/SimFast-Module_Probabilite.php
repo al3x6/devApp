@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start();
+if(isset($_SESSION['login'])){
+?>
 
 
 <!Doctype html>
@@ -39,32 +41,31 @@
         </div>
         <div class="Module_proba">
             <div class="Proba_valeurs">
-                <form action="" method="post">
+                <form action="normal_law.php" method="post">
                     <table>
                         <tr>
-                            <td>valeur 1 </td>
-                            <td><input class="Proba_input_text" type="text" name="val_1"></td>
-                            <td>valeur 3 </td>
-                            <td><input class="Proba_input_text" type="text" name="val_3"></td>
+                            <td>μ (mu)</td>
+                            <td><input class="Proba_input_text" type="text" name="mu"></td>
+
+                            <td>t (quantile)</td>
+                            <td><input class="Proba_input_text" type="text" name="t"></td>
                         </tr>
                         <tr>
-                            <td>valeur 2 </td>
-                            <td><input class="Proba_input_text" type="text" name="val_2"></td>
-                            <td>valeur 4 </td>
-                            <td><input class="Proba_input_text" type="text" name="val_4"></td>
+                            <td>σ (sigma)</td>
+                            <td><input class="Proba_input_text" type="text" name="sigma"></td>
+                            <td><input type="submit" name="valider" value="valider"></td>
                         </tr>
                     </table>
                 </form>
             </div>
             <div class="Proba_Resultat">
-                <div class="Proba_div_TextArea">
-                    <textarea class="Proba_TextArea" name="Proba_inferieur" id="" cols="30" rows="10"></textarea>
-                    <textarea class="Proba_TextArea" name="Proba_superieur" id="" cols="30" rows="10"></textarea>
-                </div>
-                <div class="Proba_p">
-                    <p>La probabilité qu'elle soit inférieur à</p>
-                    <p>La probabilité qu'elle soit supérieur à</p>
-                </div>
+                <span>
+                    <textarea class="Proba_TextArea" name="Proba_inferieur"></textarea>
+                    <input type="text" value="Méthode des rectangles">
+                </span>
+
+                <p> P(X < t) <?php if(isset($_GET["result"]))echo " = " . $_GET["result"]?> </p>
+                <p>  </p>
             </div>
         </div>
     </div>
@@ -74,3 +75,7 @@
 </body>
 
 </html>
+<?php }
+else{
+    header('Location: ../SimFast-Accueil_utilisateur.php');
+}
