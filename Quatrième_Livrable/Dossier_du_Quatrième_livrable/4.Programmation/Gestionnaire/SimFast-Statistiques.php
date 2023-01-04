@@ -1,6 +1,4 @@
-<?php session_start();
-if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
-?>
+<?php session_start(); ?>
 
 
 <!Doctype html>
@@ -55,7 +53,3 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
 </body>
 
 </html>
-<?php }
-else{
-    header('Location: ../SimFast-Accueil.php');
-}

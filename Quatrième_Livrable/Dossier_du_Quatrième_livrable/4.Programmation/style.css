@@ -7,7 +7,6 @@
     padding: 0;
     /*On met à 0 pour que la barre de naviation soit bien collée en haut de la page*/
     /*Et le footer en bas */
-    /*box-sizing: border-box;*/
 }
 
 body {
@@ -333,20 +332,29 @@ h4 {
     margin-inline: 5%;
 }
 
-.Proba_Resultat span{
+.Proba_div_TextArea {
+    /* Bloc contenant les <textarea> */
+    margin-inline: 3%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
 .Proba_TextArea {
     /* <Textarea> */
     border: none;
     resize: none;
-    width: 300px;
-    height: 200px;
     /* L'utilisateur ne peut pas redimentionner */
 }
+
+.Proba_p {
+    /* Paragraphes sous les <textarea> */
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
 
 /* Module Conversion */
 
@@ -384,7 +392,6 @@ h4 {
     margin-inline: auto;
 }
 
-
 .Conversion_output .output_valeurs {
     /* Zones de texte */
     padding-top: 0.5%;
@@ -392,21 +399,8 @@ h4 {
     border: none;
     width: 47%;
     filter: drop-shadow(-0.5px 2px 1.5px rgb(109, 108, 108, 0.7));
-}
-input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input number*/
-    -webkit-appearance: none;
-    margin: 0;
-    }
-
-.Conversion_output input[type="submit"] {
-    border: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 15px;
-    background-color: rgba(253, 54, 54, 0.459);
-    margin-top: 5px;
-    cursor: pointer;
+    pointer-events: none;
+    /* Zone de texte non modifiable par l'utilisateur */
 }
 
 
@@ -423,10 +417,7 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-content: start;
-    padding-top: 0;
-    /*height: 300px;*/
-    /*background-color: #fff;*/
+    height: 300px;
 }
 
 .Amortissement_input {
@@ -434,6 +425,8 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     display: flex;
     flex-direction: column;
     margin-left: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .Amortissement_input td {
@@ -460,29 +453,16 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     /* Bloc contenant le titre "Estimation" et le <textarea> */
     width: 35%;
     min-width: 250px;
-    display: flex;
 }
 
- .Amortissement_output td, .Amortissement_output th {
-    border: 1px solid black;
-    padding: 20px;
-     background-color: #fff;
-}
-
-.Amortissement_output table {
-    /*position: relative;*/
-    bottom: 50px;
-}
-
-.Amortissement_input input[type="submit"] {
+.Amortissement_TextArea {
+    /* Bloc contenant <textarea> */
     border: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 15px;
-    background-color: rgba(253, 54, 54, 0.459);
-    margin-top: 5px;
-    cursor: pointer;
+    height: 82%;
+    width: 100%;
+    resize: none;
 }
+
 
 /* Gestion des utilisateurs */
 
