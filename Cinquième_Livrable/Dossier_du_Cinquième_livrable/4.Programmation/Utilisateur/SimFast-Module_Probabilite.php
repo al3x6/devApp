@@ -56,16 +56,20 @@ if(isset($_SESSION['login'])){
                             <td><input type="submit" name="valider" value="valider"></td>
                         </tr>
                     </table>
-                </form>
             </div>
-            <div class="Proba_Resultat">
-                <span>
-                    <textarea class="Proba_TextArea" name="Proba_inferieur"></textarea>
-                    <input type="text" value="Méthode des rectangles">
-                </span>
 
+            <div class="Proba_Resultat">
+                    <?php if(isset($_GET["result"]))
+                        echo "<img src='graphe.png' alt='graphe'>";
+                    else
+                        echo "<div class='rectangle_vide'></div>"; ?>
                 <p> P(X < t) <?php if(isset($_GET["result"]))echo " = " . $_GET["result"]?> </p>
-                <p>  </p>
+                    <select name="methode" id="methode">
+                        <option value="methode_rectangle_droit">methode rectangles droits</option>
+                        <option value="methode_rectangle_gauche">methode rectangles gauches</option>
+                        <option value="methode_trapeze">methode trapèzes</option>
+                    </select>
+                </form>
             </div>
         </div>
     </div>

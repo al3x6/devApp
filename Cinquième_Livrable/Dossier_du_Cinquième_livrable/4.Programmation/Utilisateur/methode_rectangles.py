@@ -1,7 +1,10 @@
 # Calcul de probabilité de la loi normale avec la méthode des rectangles droits
+from scipy.stats import norm
 import matplotlib.pyplot as plt
 import sys
 from loi_normale import loi_normale
+import numpy as np
+
 
 def methode_rectangles(mu, sigma, quantile):
     a = 0  # limite inferieur alpha de l'intervalle [a;b]
@@ -10,36 +13,28 @@ def methode_rectangles(mu, sigma, quantile):
     x = a
     largeur = (b - a) / n  # Largeur des rectangles
     resultat = 0
-    vx=[]
-    vy=[]
 
     for i in range(n):
         loi = loi_normale(mu,sigma,x)
         resultat = resultat + loi  # On somme la fonction de la loi normale
         x = x + largeur  # On avance pas à pas
-        vx.append(i)
-        vy.append(loi)
 
-    plt.bar(vx, vy, width=2)
     # Afficher le graphique
-    plt.show()
     return resultat * largeur + 0.5
 
 
-# def graphe(mu,sigma,quantile):
-#     x = [i for i in range(-5, 6)]
-#     y = [methode_rectangles(mu,sigma,i) for i in x]
-#
-#     plt.plot(x, y)
-#     # plt.show()
-#     plt.savefig('graphe.png')
-#     return loi_normale(mu,sigma,5)
+def graphe(mu,sigma,quantile):
+    plt.clf()
+    axe = np.linspace(-4, 4, 100)
+    plt.plot(axe, norm.pdf(axe, mu, sigma))
+    # plt.show()
+    plt.savefig('graphe.png')
+    return methode_rectangles(mu,sigma,quantile)
 
-#
-# if __name__ == '__main__':
-#     mu = float(sys.argv[1])
-#     sigma = float(sys.argv[2])
-#     quantile = float(sys.argv[3])
 
-resultat = methode_rectangles(0, 1, 0)
-print(resultat)
+if __name__ == '__main__':
+    mu = float(sys.argv[1])
+    sigma = float(sys.argv[2])
+    quantile = float(sys.argv[3])
+    resultat = graphe(mu, sigma, quantile)
+    print(resultat)
