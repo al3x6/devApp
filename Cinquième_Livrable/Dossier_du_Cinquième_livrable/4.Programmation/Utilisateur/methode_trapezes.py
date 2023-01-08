@@ -1,4 +1,6 @@
 # Calcul de probabilité de la loi normale avec la méthode des trapèzes
+
+#! /usr/bin/python
 from scipy.stats import norm
 import matplotlib.pyplot as plt
 from loi_normale import loi_normale

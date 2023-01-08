@@ -1,4 +1,6 @@
 # Calcul de probabilité de la loi normale avec la méthode des rectangles droits
+
+#! /usr/bin/python
 from scipy.stats import norm
 import matplotlib.pyplot as plt
 import sys
@@ -32,9 +34,10 @@ def graphe(mu,sigma,quantile):
     return methode_rectangles(mu,sigma,quantile)
 
 
-if __name__ == '__main__':
-    mu = float(sys.argv[1])
-    sigma = float(sys.argv[2])
-    quantile = float(sys.argv[3])
-    resultat = graphe(mu, sigma, quantile)
-    print(resultat)
+
+mu = float(sys.argv[1])
+sigma = float(sys.argv[2])
+quantile = float(sys.argv[3])
+print(methode_rectangles(mu,sigma,quantile))
+#resultat = graphe(mu, sigma, quantile)
+#print(resultat,"test")

@@ -1,4 +1,6 @@
 # Fonction pour la loi normale
+
+#! /usr/bin/python
 import matplotlib.pyplot as plt
 import math
 import sys
