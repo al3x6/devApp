@@ -7,7 +7,6 @@ if(isset($_SESSION['login'])){
 <html lang="fr">
 
 <head>
-
     <title>SimFast - Module_Probabilité en loi normale</title>
     <!-- Titre de la page -->
     <meta charset="utf-8">
@@ -17,7 +16,6 @@ if(isset($_SESSION['login'])){
     <link rel="shortcut icon" href="../Images/SimFast_logo.png" type="image/x-icon">
     <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
     <link rel="stylesheet" href="../style.css">
-
 </head>
 
 <body>

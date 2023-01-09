@@ -1,5 +1,7 @@
 <?php session_start();
 if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
+    include '../Config/database.php';
+    global $db;
 ?>
 
 
@@ -42,10 +44,39 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
                 <textarea class="stats_visite_graphe" name="stats_visite_graphe"></textarea>
                 <textarea class="stats_modules_graphe" name="stats_modules_graphe"></textarea>
             </div>
+            <?php
+            //Statistiques visiteurs
+            $stat_visite=$db->prepare("SELECT * FROM stats_visite");
+            $stat_visite->execute();
+            $nbr_visiteurs_totaux = 0;
+            $nbr_visiteurs_jour = 0;
+            $nbr_visiteurs_semaine = 0;
+            while($resultat = $stat_visite->fetch(PDO::FETCH_ASSOC)):
+                if($resultat["date"] == "aujourd'hui")
+                    $nbr_visiteurs_jour +=1;
+                if($resultat["date"] <= "cette semaine")
+                    $nbr_visiteurs_semaine +=1;
+                $nbr_visiteurs_totaux+=1;
+            endwhile;
+
+//            //Statistiques modules
+//            $stat_module=$db->prepare("SELECT * FROM stats_module");
+//            $stat_module->execute();
+//            $nbr_visiteurs_totaux = 0;
+//            $nbr_visiteurs_jour = 0;
+//            $nbr_visiteurs_semaine = 0;
+//            while($resultat = $stat_module->fetch(PDO::FETCH_ASSOC)):
+//                if($resultat["date"] == "aujourd'hui")
+//                    $nbr_visiteurs_jour +=1;
+//                if($resultat["date"] <= "cette semaine")
+//                    $nbr_visiteurs_semaine +=1;
+//                $nbr_visiteurs_totaux+=1;
+//            endwhile;
+//            ?>
 
             <div class="Statistiques_p">
-                <p>Statistiques des visites</p>
-                <p>Statistiques des modules utilisés</p>
+                <p>Nombre de visiteurs différents aujourd'hui : <?=$nbr_visiteurs_totaux?> </p>
+                <p>Nombre de visiteurs différents cette semaine : <?=$nbr_visiteurs?></p>
             </div>
         </div>
     </div>

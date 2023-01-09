@@ -35,9 +35,12 @@ if (!empty($_POST['login']) and !empty($_POST['mdp'])) {
                 exit;
             }
         } else {
+            $_SESSION['login_incorrect'] = $_POST['login'];
+            $_SESSION['mdp_incorrect'] = $_POST['mdp'];
             header('Location: SimFast-Connexion.php?error1');
         }
     } else {
+
         header('Location: SimFast-Connexion.php?error1');
     }
 } else {

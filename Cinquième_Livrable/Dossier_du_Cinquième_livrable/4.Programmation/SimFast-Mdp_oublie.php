@@ -16,7 +16,7 @@
 <body>
     <div class="contenu">
         <div class='logo'>
-            <a href="SimFast-Accueil.php" title="Aller au menu">
+            <a href="index.php" title="Aller au menu">
                 <img src="Images/SimFast_logo.png" alt="SimFast_logo">
             </a>
         </div>

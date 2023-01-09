@@ -1,3 +1,20 @@
+<?php
+session_start();
+include 'Config/database.php';
+global $db;
+if(isset($_SESSION['login'])){
+    if($_SESSION['login'] == 'admin')
+        header("Location: Gestionnaire/SimFast-Accueil_gestionnaire.php");
+    else
+        header("Location: Utilisateur/SimFast-Accueil_utilisateur.php");
+}
+else{
+$incremente_nbr_visiteurs = $db->prepare("INSERT INTO stats_visite(adresse_ip) VALUES(?)");
+$incremente_nbr_visiteurs->execute(array($_SERVER['REMOTE_ADDR']));
+?>
+
+
+
 <!Doctype html>
 <html lang="fr">
 
@@ -52,3 +69,4 @@
 
 
 </html>
+<?php } ?>

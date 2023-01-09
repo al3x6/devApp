@@ -1,6 +1,5 @@
 # Calcul de probabilité de la loi normale avec la méthode des trapèzes
 
-#! /usr/bin/python
 from scipy.stats import norm
 import matplotlib.pyplot as plt
 from loi_normale import loi_normale
@@ -30,10 +29,8 @@ def graphe(mu,sigma,quantile):
     return methode_trapezes(mu,sigma,quantile)
 
 
+mu = float(sys.argv[1])
+sigma = float(sys.argv[2])
+quantile = float(sys.argv[3])
+print(graphe(mu, sigma, quantile))
 
-if __name__ == '__main__':
-    mu = float(sys.argv[1])
-    sigma = float(sys.argv[2])
-    quantile = float(sys.argv[3])
-    resultat = graphe(mu, sigma, quantile)
-    print(resultat)

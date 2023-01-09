@@ -1,7 +1,13 @@
 <?php
 session_start();
+include '../Config/database.php';
+global $db;
+
 
 if(isset($_POST["convertir"])){
+    $updatemot_dernier_module = $db->prepare("UPDATE utilisateur SET dernier_module = ? where login=?");
+    $updatemot_dernier_module->execute(array("Informatique", $_SESSION['login']));
+
     $choix1= $_POST["choix_conversion1"];
     $choix2= $_POST["choix_conversion2"];
     $valeur = $_POST["output_val"];

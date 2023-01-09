@@ -5,5 +5,6 @@
     <ul>
         <li><a href='SimFast-Gestion_utilisateurs.php'>Utilisateurs</a></li>
         <li><a href='SimFast-Statistiques.php'>Statistiques</a></li>
+        <li><a href='SimFast-Log.php'>Log</a></li>
     </ul>
 </nav>

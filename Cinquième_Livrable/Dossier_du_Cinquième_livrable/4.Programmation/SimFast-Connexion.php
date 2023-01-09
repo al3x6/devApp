@@ -1,14 +1,25 @@
 <?php
+session_start();
 if(isset($_GET["success"])){
     $success = "Votre compte a bien été crée";
 }
 
 if(isset($_GET["error0"])){
-$err = "Veuillez remplir tous les champs";
+    $err = "Veuillez remplir tous les champs";
 }
 
 if(isset($_GET["error1"])){
-$err = "Nom d'utilisateur / Mot de passe incorrect";
+    $err = "Nom d'utilisateur / Mot de passe incorrect";
+    if(isset($_SESSION["login_incorrect"]) && isset($_SESSION["mdp_incorrect"])){
+        $login_incorrect = $_SESSION['login_incorrect'];
+        $mdp_incorrect = $_SESSION['mdp_incorrect'];
+        $ip = $_SERVER['REMOTE_ADDR'];
+
+        $failed_login_log = 'echecs_connexion.log';
+        $log_file = fopen($failed_login_log, "a") or die("Impossible d'ouvrir le fichier");
+        fwrite($log_file, $login_incorrect. " " . $mdp_incorrect. " " . $ip . " ". date("Y-m-d H:i:s") . "\n");
+        fclose($log_file);
+    }
 }
 ?>
 
@@ -30,7 +41,7 @@ $err = "Nom d'utilisateur / Mot de passe incorrect";
     <div class="contenu">
 
         <div class="logo">
-            <a href="SimFast-Accueil.php" title="Aller au menu">
+            <a href="index.php" title="Aller au menu">
                 <img src="Images/SimFast_logo.png" alt="SimFast_logo">
             </a>
         </div>
@@ -57,8 +68,8 @@ $err = "Nom d'utilisateur / Mot de passe incorrect";
         </div>
     </div>
 
-    <footer>
-        <?php include 'Footer.php'; ?>
-    </footer>
+<footer>
+    <?php include 'Footer.php'; ?>
+</footer>
 </body>
 </html>

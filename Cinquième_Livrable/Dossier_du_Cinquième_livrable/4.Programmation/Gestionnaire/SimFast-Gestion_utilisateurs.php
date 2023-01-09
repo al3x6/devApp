@@ -7,9 +7,7 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
 
 <!Doctype html>
 <html lang="fr">
-
 <head>
-
     <title>SimFast - Gestion des utilisateurs</title>
     <!-- Titre de la page -->
     <meta charset="utf-8">
@@ -19,7 +17,6 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
     <link rel="shortcut icon" href="../Images/SimFast_logo.png" type="image/x-icon">
     <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
     <link rel="stylesheet" href="../style.css">
-
 </head>
 
 <body>
@@ -59,30 +56,21 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
                             <tr>
                                 <td><?= $resultat['login']?></td>
                                 <td><?= $resultat['email']?></td>
-                                <td>dernier module utilisé</td>
+                                <td><?= $resultat['dernier_module']?></td>
                                 <td><input type="checkbox" name="uSuppression[]" value="<?= $resultat['login']?>"></td>
                             </tr>
                     <?php } endwhile ?>
                 </table>
             </div>
-
             <div class="gestion_bouton_supprimer">
                 <input class="Valide_suppression" type="submit" name="suppression" value="Supprimer">
             </div>
 
         </form>
     </div>
-
     <footer>
         <?php include '../Footer.php'; ?>
     </footer>
-    <script>
-        function Deleteqry(id){
-            if(confirm("Etes-vous sûr de vouloir supprimer cette annonce ?")==true)
-                window.location="admin_produit.php?id_produit="+id;
-            return false;
-        }
-    </script>
 </body>
 
 </html>
