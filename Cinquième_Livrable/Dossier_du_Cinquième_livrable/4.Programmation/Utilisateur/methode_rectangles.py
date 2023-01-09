@@ -49,5 +49,4 @@ if __name__ == '__main__':
     mu = float(sys.argv[1])
     sigma = float(sys.argv[2])
     quantile = float(sys.argv[3])
-    print(graphe(0,1,1.2))
-
+    print(graphe(mu,sigma,quantile))
