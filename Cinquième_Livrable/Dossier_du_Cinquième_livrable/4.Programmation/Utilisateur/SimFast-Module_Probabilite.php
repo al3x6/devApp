@@ -63,9 +63,9 @@ if(isset($_SESSION['login'])){
                         echo "<div class='rectangle_vide'></div>"; ?>
                 <p> P(X < t) <?php if(isset($_GET["result"]))echo " = " . $_GET["result"]?> </p>
                     <select name="methode" id="methode">
-                        <option value="methode_rectangle_droit">methode rectangles droits</option>
-                        <option value="methode_rectangle_gauche">methode rectangles gauches</option>
-                        <option value="methode_trapeze">methode trapèzes</option>
+                        <option value="methode_rectangle">methode des rectangles droits</option>
+                        <option value="methode_trapeze">methode des trapèzes</option>
+                        <option value="methode_simpson">methode de simpson</option>
                     </select>
                 </form>
             </div>
