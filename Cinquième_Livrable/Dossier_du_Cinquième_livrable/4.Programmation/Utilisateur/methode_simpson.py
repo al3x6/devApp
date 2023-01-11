@@ -5,16 +5,48 @@ from loi_normale import loi_normale
 import numpy as np
 
 def simpson(mu,sigma,quantile):
+    n=1000000
     a=0
-    b=quantile
-    n = 1000000
-    h = (b - a) / n
-    s = loi_normale(mu,sigma,a) + loi_normale(mu,sigma,b)
-    for i in range(1, n, 2):
-        s += 4 * loi_normale(mu,sigma,a + i * h)
-    for i in range(2, n-1, 2):
-        s += 2 * loi_normale(mu,sigma,a + i * h)
-    return s * h / 3
+    x=a
+
+    resultat=0
+    result=0
+
+    ab = loi_normale(mu,sigma,x) + loi_normale(mu,sigma,quantile)
+
+    if(mu!=0 and sigma!=1):
+        quantile=(quantile-mu)/sigma
+
+        muc=0
+        sigc=1
+
+        b=quantile
+        largeur=(b-a)/n
+        
+        for k in range(n):
+            x= (k * (b-a)) / n
+            resultat=resultat + loi_normale(muc,sigc,x)
+        
+        for j in range(n):
+            x=((2 * j + 1) * (b-a)) / (2 * n)
+            result=result + loi_normale(muc,sigc,x)
+
+        return ((largeur/6) * (ab + 2 * resultat + 4 * result)+0.5)
+    
+    else:
+        b=quantile
+        largeur= (b-a) /n
+
+        for k in range(n):
+            x= (k * (b-a)) / n
+            resultat= resultat + loi_normale(mu,sigma,x)
+        
+        for j in range(n):
+            x=((2 * j + 1) * (b-a)) / (2 * n)
+            result= result + loi_normale(mu,sigma,x)
+
+        return ((largeur/6) * (ab + 2 * resultat + 4 * result)+0.5)
+    
 
 def graphe(mu,sigma,quantile):
     plt.clf()
