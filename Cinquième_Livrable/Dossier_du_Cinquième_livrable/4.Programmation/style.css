@@ -486,6 +486,24 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     cursor: pointer;
 }
 
+/* Module de crypto */
+.Crypto_content {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #6ca4d9;
+    height: 250px;
+
+}
+
+.Crypto_chiffrage form{
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
 /* Gestion des utilisateurs */
 
 .Table_gestion_utilisateurs {

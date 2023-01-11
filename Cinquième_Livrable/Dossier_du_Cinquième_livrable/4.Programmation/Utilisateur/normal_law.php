@@ -16,9 +16,9 @@ if(isset($_POST["valider"])){
    $methode_rectangles ="python3 /var/www/html/Utilisateur/methode_rectangles.py";
    $methode_trapezes ="/usr/bin/python3 methode_trapezes.py 2>&1";
 
-    // $loi_normale ="C:\Users\mlaat\AppData\Local\Programs\Python\Python310\python.exe loi_normale.py 2>&1";
-    // $methode_rectangles ="C:\Users\mlaat\AppData\Local\Programs\Python\Python310\python.exe methode_rectangles.py 2>&1";
-    // $methode_trapezes ="C:\Users\mlaat\AppData\Local\Programs\Python\Python310\python.exe methode_trapezes.py 2>&1";
+//     $loi_normale ="C:\Users\mlaat\AppData\Local\Programs\Python\Python310\python.exe loi_normale.py 2>&1";
+//     $methode_rectangles ="C:\Users\mlaat\AppData\Local\Programs\Python\Python310\python.exe methode_rectangles.py 2>&1";
+//     $methode_trapezes ="C:\Users\mlaat\AppData\Local\Programs\Python\Python310\python.exe methode_trapezes.py 2>&1";
 
 //  2>&1 à la fin du nom de la commande pour afficher et debugger les problèmes si il y en a
 
