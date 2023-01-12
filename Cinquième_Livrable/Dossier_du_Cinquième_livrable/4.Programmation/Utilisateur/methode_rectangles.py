@@ -38,9 +38,14 @@ def methode_rectangles(mu, sigma, quantile):
 
 def graphe(mu,sigma,quantile):
     plt.clf()
-    axe = np.linspace(-4, 4, 100)
+    interval=np.arange(mu-4,quantile,0.2)   #Intervalle pour les rectangles
+    axe = np.linspace(mu-6,mu+4, 100)  #tracage de la courbe, et de l'axe
     plt.plot(axe, norm.pdf(axe, mu, sigma))
-    # plt.show()
+    
+    for i in range(len(interval)-1):     #Tracer rectangle pour chaque intervalle
+        plt.fill_betweenx([0, norm.pdf(interval[i],mu,sigma)],interval[i],interval[i+1], color='gray',alpha=0.5)
+
+    plt.show()
     plt.savefig('graphe.png')
     return methode_rectangles(mu,sigma,quantile)
 
