@@ -48,24 +48,29 @@ if (isset($_SESSION['login'])) {
                 <div class="Crypto_chiffrage">
                     <form action="encrypt.php" method="post">
                         <h4>Chiffrement</h4>
-                        <input class="Crypto_textfiel_input" type="text" name="cle" placeholder="Clés" value="<?php if(isset($_SESSION["cle"]))echo $_SESSION["cle"]; ?>">
-                        <input class="Crypto_textfiel_input" type="text" name="texte" placeholder="Texte" value="<?php if(isset($_SESSION["texte"]))echo $_SESSION["texte"]; ?>">
-                        <input type="submit" name="chiffrage" value="valider">
-                        <select name="choix_chiffrement" class="">
-                            <option value="Chiffrage">Chiffrage</option>
-                            <option value="dechiffrage">Dechiffrage</option>
-                        </select>
-                        <p class="error"><?php if (isset($err)) echo $err; ?></p>
+                        <div class="Conversion_output">
+                            <input class="Crypto_textfiel_input" type="text" name="cle" placeholder="Clés"
+                                   value="<?php if (isset($_SESSION["cle"])) echo $_SESSION["cle"]; ?>">
+                            <input class="Crypto_textfiel_input" type="text" name="texte" placeholder="Texte"
+                                   value="<?php if (isset($_SESSION["texte"])) echo $_SESSION["texte"]; ?>">
+                            <select name="choix_chiffrement" class="">
+                                <option value="Chiffrage">Chiffrage</option>
+                                <option value="dechiffrage">Dechiffrage</option>
+
+                            <input type="submit" name="chiffrage" value="valider">
+                            </select>
+                            <p class="error"><?php if (isset($err)) echo $err; ?></p>
+                        </div>
                     </form>
-                    <p><?php if(isset($_GET["result"])) echo "Suite chiffrée : " . $_GET["result"]?> </p>
+                    <p><?php if (isset($_GET["result"])) echo "Suite chiffrée : " . $_GET["result"] ?> </p>
                 </div>
             </div>
         </div>
 
 
-    <footer>
-        <?php include '../Footer.php'; ?>
-    </footer>
+        <footer>
+            <?php include '../Footer.php'; ?>
+        </footer>
     </body>
 
     </html>

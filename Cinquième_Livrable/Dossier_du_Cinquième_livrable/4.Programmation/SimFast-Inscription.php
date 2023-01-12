@@ -2,6 +2,9 @@
 if(isset($_GET['error0'])){
     $err = "Tous les champs n'ont pas été saisis !";
 }
+if(isset($_GET['error01'])){
+    $err = "captcha fausse";
+}
 if(isset($_GET['error1'])){
     $err = "Le nom d'utilisateur est trop long";
 }
@@ -54,7 +57,14 @@ if(isset($_GET['error5'])){
                     <input class="textfield" type="password" name="mdp_confirme" placeholder="Confirmation mot de passe">
                     <br>
                     <h3>Captcha</h3>
-                    <img src="captcha.php" style="vertical-align: middle;"/>
+                    <?php
+                    $prem=rand(0,10);
+                    $deux=rand(0,10);
+                    echo " Combien font : ". $prem . " X " . $deux;
+                    $resultat=$prem*$deux;
+                    ?>
+
+                    <input type="hidden" name="resultat" value="<?php echo $resultat; ?>" />
                     <input name="captcha" type="text">
                     <br>
                     <input class="bouton_submit" type="submit" name="inscription" value="Valider">
