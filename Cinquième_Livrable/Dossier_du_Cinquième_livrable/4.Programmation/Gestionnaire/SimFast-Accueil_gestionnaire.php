@@ -38,7 +38,7 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
         </div>
         <div class='texte_description_site'>
             <h3>Bienvenue Gestionnaire!</h3>
-            <h4>Vous pouvez gérer les utilisateurs dans l'onglet "Utilisateurs" ainsi que visionner des statistiques recueillis sur les différents modules dans l'onglet "Statistiques".</h4>
+            <h4>Vous pouvez gérer les utilisateurs dans l'onglet "Utilisateurs" ainsi que visionner des statistiques recueillies sur les différents modules dans l'onglet "Statistiques".</h4>
         </div>
     </div>
 
