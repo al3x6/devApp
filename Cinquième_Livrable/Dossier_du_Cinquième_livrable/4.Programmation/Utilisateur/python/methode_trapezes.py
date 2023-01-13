@@ -2,7 +2,7 @@
 
 from scipy.stats import norm
 import matplotlib.pyplot as plt
-from loi_normale import loi_normale
+from python.loi_normale import loi_normale
 import sys
 import numpy as np
 

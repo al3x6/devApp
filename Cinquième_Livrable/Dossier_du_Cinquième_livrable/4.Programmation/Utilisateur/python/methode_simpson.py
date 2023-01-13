@@ -1,7 +1,7 @@
 from scipy.stats import norm
 import matplotlib.pyplot as plt
 import sys
-from loi_normale import loi_normale
+from python.loi_normale import loi_normale
 import numpy as np
 
 def simpson(mu,sigma,quantile):
