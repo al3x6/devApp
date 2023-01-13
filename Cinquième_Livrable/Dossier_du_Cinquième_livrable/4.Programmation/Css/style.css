@@ -309,6 +309,16 @@ h4 {
     margin-top: 50%;
 }
 
+.Proba_valeurs input[type="submit"] {
+    border: 0px;
+    border-radius: 15px;
+    height: 35px;
+    width: 100px;
+    background-color: rgba(253, 54, 54, 0.459);
+    cursor: pointer;
+    margin-left: 10px;
+}
+
 .Proba_valeurs td:nth-child(2n+1) {
     /* Cellules impairs des lignes (Valeur 1, 2, 3, 4) */
     text-align: right;
@@ -333,12 +343,6 @@ h4 {
     margin-inline: 5%;
 }
 
-/*.Proba_Resultat span{*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    gap: 30px;*/
-/*}*/
 .Proba_Resultat img{
     width: 500px;
     height: 300px;
@@ -411,7 +415,6 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     cursor: pointer;
 }
 
-
 /* Module d'amortissement */
 
 .Module_Amortissement {
@@ -427,8 +430,7 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     justify-content: space-between;
     align-content: start;
     padding-top: 0;
-    /*height: 300px;*/
-    /*background-color: #fff;*/
+
 }
 
 .Amortissement_input {
@@ -490,9 +492,9 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
 .Crypto_content {
     display: flex;
     justify-content: space-evenly;
+    align-content: center;
     background-color: #6ca4d9;
     height: 250px;
-
 }
 
 .Crypto_chiffrage form{
@@ -504,29 +506,68 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     gap: 15px;
 }
 
+.Crypto_output{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.Crypto_output span{
+    display: flex;
+    width: 100%;
+}
+.Crypto_output input[type="text"]{
+    width: 250px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+.Crypto_output select{
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 5px;
+}
+.Crypto_output input[type="submit"], .Crypto_output input[type="button"]{
+    border: 0px;
+    border-radius: 15px;
+    height: 35px;
+    width: 100px;
+    background-color: rgba(253, 54, 54, 0.459);
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.Crypto_content .bibliotheque{
+    position: absolute;
+    left: 10px;
+    color: white;
+    font-weight: 500;
+}
+
 /* Gestion des utilisateurs */
 
-.Table_gestion_utilisateurs {
+.Table_gestion {
     /* Contenu de la page sous la barre de navigation */
     margin: 5%;
 }
 
-.Table_gestion_utilisateurs table {
+.Table_gestion table {
     /* Table */
     width: 100%;
     border-collapse: collapse;
 }
 
-.Table_gestion_utilisateurs th {
+.Table_gestion th {
     /* Entête de la table*/
     padding-top: 1%;
     padding-bottom: 1%;
 }
 
-.Table_gestion_utilisateurs>table,
-.Table_gestion_utilisateurs th,
-.Table_gestion_utilisateurs tr,
-.Table_gestion_utilisateurs td {
+.Table_gestion>table,
+.Table_gestion th,
+.Table_gestion tr,
+.Table_gestion td {
     /* Table, entête, lignes, cellules */
     border: solid 1px black;
     background-color: white;

@@ -17,7 +17,7 @@ if(isset($_SESSION['login'])){
     <!-- Nom de l'auteur du site -->
     <link rel="shortcut icon" href="../Images/SimFast_logo.png" type="image/x-icon">
     <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Css/style.css">
 
 </head>
 
@@ -28,13 +28,13 @@ if(isset($_SESSION['login'])){
             <nav>
                 <ul>
                     <li><a href='SimFast-Profil.php'>Profil</a></li>
-                    <li><a href='../deconnexion.php'>Se déconnecter</a></li>
+                    <li><a href='../Serveur/deconnexion.php'>Se déconnecter</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class='modules_navigation'>
-            <?php include 'Menu-Utilisateur.php'; ?>
+            <?php include 'serveur/menu-utilisateur.php'; ?>
         </div>
 
         <div class="rectangle_blanc">
@@ -53,7 +53,7 @@ if(isset($_SESSION['login'])){
     </div>
 
     <footer>
-        <?php include '../Footer.php'; ?>
+        <?php include '../Serveur/footer.php'; ?>
     </footer>
 
 </body>
@@ -62,5 +62,5 @@ if(isset($_SESSION['login'])){
 </html>
 <?php }
 else{
-    header('Location: ../SimFast-Accueil_utilisateur.php');
+    header('Location: ../index.php');
 }

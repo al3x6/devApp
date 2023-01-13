@@ -10,7 +10,7 @@
     <!-- Nom de l'auteur du site -->
     <link rel="shortcut icon" href="Images/SimFast_logo.png" type="image/x-icon">
     <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Css/style.css">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
         </div>
     </div>
     <footer>
-        <?php include 'Footer.php'; ?>
+        <?php include 'Serveur/footer.php'; ?>
     </footer>
 </body>
 

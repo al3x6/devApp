@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'Config/database.php';
+include '../Config/database.php';
 global $db;
 
 if (!empty($_POST['login']) and !empty($_POST['mdp'])) {
@@ -27,23 +27,23 @@ if (!empty($_POST['login']) and !empty($_POST['mdp'])) {
         if (password_verify($mot_de_passe, $hashpassword)) {
             if ($login == "admin" or $login == "admin@gmail.com") {
                 $_SESSION['login'] = $result['login'];
-                header("Location: Gestionnaire/SimFast-Accueil_gestionnaire.php");
+                header("Location: ../Gestionnaire/SimFast-Accueil_gestionnaire.php");
             } else {
                 $_SESSION['login'] = $result['login'];
                 $_SESSION['email'] = $result['email'];
-                header("Location: Utilisateur/SimFast-Accueil_utilisateur.php");
+                header("Location: ../Utilisateur/SimFast-Accueil_utilisateur.php");
                 exit;
             }
         } else {
             $_SESSION['login_incorrect'] = $_POST['login'];
             $_SESSION['mdp_incorrect'] = $_POST['mdp'];
-            header('Location: SimFast-Connexion.php?error1');
+            header('Location: ../SimFast-Connexion.php?error1');
         }
     } else {
 
-        header('Location: SimFast-Connexion.php?error1');
+        header('Location: ../SimFast-Connexion.php?error1');
     }
 } else {
-    header('Location: SimFast-Connexion.php?error0');
+    header('Location: ../SimFast-Connexion.php?error0');
 }
 ?>

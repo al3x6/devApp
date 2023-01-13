@@ -15,7 +15,7 @@ if(isset($_SESSION['login'])){
     <!-- Nom de l'auteur du site -->
     <link rel="shortcut icon" href="../Images/SimFast_logo.png" type="image/x-icon">
     <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Css/style.css">
 </head>
 
 <body>
@@ -25,13 +25,13 @@ if(isset($_SESSION['login'])){
             <nav>
                 <ul>
                     <li><a href='SimFast-Profil.php'>Profil</a></li>
-                    <li><a href='../deconnexion.php'>Se déconnecter</a></li>
+                    <li><a href='../Serveur/deconnexion.php'>Se déconnecter</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class='modules_navigation'>
-            <?php include 'Menu-Utilisateur.php'; ?>
+            <?php include 'serveur/menu-utilisateur.php'; ?>
         </div>
 
         <div class="Titre_module">
@@ -39,7 +39,7 @@ if(isset($_SESSION['login'])){
         </div>
         <div class="Module_proba">
             <div class="Proba_valeurs">
-                <form action="normal_law.php" method="post">
+                <form action="serveur/normal_law.php" method="post">
                     <table>
                         <tr>
                             <td>μ (mu)</td>
@@ -58,7 +58,7 @@ if(isset($_SESSION['login'])){
 
             <div class="Proba_Resultat">
                     <?php if(isset($_GET["result"]))
-                        echo "<img src='graphe.png' alt='graphe'>";
+                        echo "<img src='img/graphe.png' alt='graphe'>";
                     else
                         echo "<div class='rectangle_vide'></div>"; ?>
                 <p> P(X < t) <?php if(isset($_GET["result"]))echo " = " . $_GET["result"]?> </p>
@@ -72,12 +72,12 @@ if(isset($_SESSION['login'])){
         </div>
     </div>
     <footer>
-        <?php include '../Footer.php'; ?>
+        <?php include '../Serveur/footer.php'; ?>
     </footer>
 </body>
 
 </html>
 <?php }
 else{
-    header('Location: ../SimFast-Accueil_utilisateur.php');
+    header('Location: ../index.php');
 }

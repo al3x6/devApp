@@ -50,18 +50,18 @@ if (isset($_POST["amortir"])) {
             $_SESSION["annee"] = $annee;
             $_SESSION["duree"] = $duree_utilisation;
 
-            header("Location: SimFast-Module_Amortissement.php");
+            header("Location: ../SimFast-Module_Amortissement.php");
         }
         else{
-            header("Location: SimFast-Module_Amortissement.php?duree");
+            header("Location: ../SimFast-Module_Amortissement.php?duree");
             $_SESSION["amortir"] = false;
         }
     } else {
-        header("Location: SimFast-Module_Amortissement.php?vide");
+        header("Location: ../SimFast-Module_Amortissement.php?vide");
         $_SESSION["amortir"] = false;
     }
 }
 else{
-    header("Location: SimFast-Module_Amortissement.php");
+    header("Location: ../SimFast-Module_Amortissement.php");
     $_SESSION["amortir"] = false;
 }

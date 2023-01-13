@@ -1,5 +1,5 @@
 <?php
-include '../Config/database.php';
+include '../../Config/database.php';
 session_start();
 global $db;
 
@@ -18,20 +18,20 @@ if(isset($_POST["mdpChange"])){
                     $mot_de_passe = password_hash($mot_de_passe, PASSWORD_BCRYPT, $options);
                     $updatemot_de_passe = $db->prepare("UPDATE utilisateur SET mdp = ? where login=?");
                     $updatemot_de_passe->execute(array($mot_de_passe, $_SESSION['login']));
-                    header('Location: SimFast-Changer_mdp.php?success');
+                    header('Location: ../SimFast-Changer_mdp.php?success');
                 } else {
-                    header('Location: SimFast-Changer_mdp.php?error2');
+                    header('Location: ../SimFast-Changer_mdp.php?error2');
                 }
             } else {
-                header('Location: SimFast-Changer_mdp.php?error1');
+                header('Location: ../SimFast-Changer_mdp.php?error1');
             }
         }else {
-            header('Location: Simfast-Changer_mdp.php?error0');
+            header('Location: ../Simfast-Changer_mdp.php?error0');
         }
     }else{
-        header('Location: SimFast-Profil.php');
+        header('Location: ../SimFast-Profil.php');
     }
 }
 else{
-    header('Location: SimFast-Profil.php');
+    header('Location: ../SimFast-Profil.php');
 }
