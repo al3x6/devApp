@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="314f15c5-d391-45c5-8205-8fb89a9c102d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Utilisateur/SimFast-Module_Crypto_Biblio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestionnaire/SimFast-Accueil_gestionnaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gestionnaire/SimFast-Accueil_gestionnaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +44,7 @@
       <workItem from="1673296379993" duration="571000" />
       <workItem from="1673551618972" duration="492000" />
       <workItem from="1673558013062" duration="580000" />
+      <workItem from="1674146970512" duration="531000" />
     </task>
     <servers />
   </component>
