@@ -15,7 +15,7 @@ if(isset($_GET["error1"])){
         $mdp_incorrect = $_SESSION['mdp_incorrect'];
         $ip = $_SERVER['REMOTE_ADDR'];
 
-        $failed_login_log = 'echecs_connexion.log';
+        $failed_login_log = 'Gestionnaire/log/echecs_connexion.log';
         $log_file = fopen($failed_login_log, "a") or die("Impossible d'ouvrir le fichier");
         fwrite($log_file, $login_incorrect. " " . $mdp_incorrect. " " . $ip . " ". date("Y-m-d H:i:s") . "\n");
         fclose($log_file);
@@ -34,7 +34,7 @@ if(isset($_GET["error1"])){
     <!-- Nom de l'auteur du site -->
     <link rel="shortcut icon" href="Images/SimFast_logo.png" type="image/x-icon">
     <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Css/style.css">
 </head>
 
 <body>
@@ -48,7 +48,7 @@ if(isset($_GET["error1"])){
 
         <div class="rectangle_blanc">
             <h3>SE CONNECTER</h3>
-            <form action="Connection.php" method="post">
+            <form action="Serveur/connection.php" method="post">
                 <div class="rectangle_blanc_content">
                     <input class="textfield" type="text" name="login" placeholder="Nom d'utilisateur / Adresse email" value="<?php if(isset($_POST['login'])){echo $_POST['login'];} ?>">
                     <br>
@@ -69,7 +69,7 @@ if(isset($_GET["error1"])){
     </div>
 
 <footer>
-    <?php include 'Footer.php'; ?>
+    <?php include 'Serveur/footer.php'; ?>
 </footer>
 </body>
 </html>

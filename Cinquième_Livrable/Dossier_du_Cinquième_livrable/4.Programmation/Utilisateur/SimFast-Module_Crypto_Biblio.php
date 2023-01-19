@@ -48,7 +48,8 @@ if (isset($_SESSION['login'])) {
                     <th>Supprimer</th>
                 </tr>
                 <?php
-                $req = $db->prepare("SELECT * FROM crypto");
+                $login = htmlspecialchars($_SESSION['login']);
+                $req = $db->prepare("SELECT * FROM crypto WHERE login= '$login'");
                 $req->execute();
                 while ($resultat = $req->fetch(PDO::FETCH_ASSOC)){ // On créer des colonnes tant qu'il y a des utilisateurs
                     ?>

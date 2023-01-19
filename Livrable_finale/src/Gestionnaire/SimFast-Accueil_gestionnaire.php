@@ -15,7 +15,7 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
     <!-- Nom de l'auteur du site -->
     <link rel="shortcut icon" href="../Images/SimFast_logo.png" type="image/x-icon">
     <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Css/style.css">
 
 </head>
 
@@ -24,13 +24,13 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
         <div class='navigation'>
             <nav>
                 <ul>
-                    <li><a href='../deconnexion.php'>Se déconnecter</a></li>
+                    <li><a href='../Serveur/deconnexion.php'>Se déconnecter</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class='modules_navigation'>
-            <?php include 'Menu-Gestionnaire.php'; ?>
+            <?php include 'serveur/menu-gestionnaire.php'; ?>
         </div>
 
         <div class='logo'>
@@ -38,12 +38,12 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
         </div>
         <div class='texte_description_site'>
             <h3>Bienvenue Gestionnaire!</h3>
-            <h4>Vous pouvez gérer les utilisateurs dans l'onglet "Utilisateurs" ainsi que visionner des statistiques recueillis sur les différents modules dans l'onglet "Statistiques".</h4>
+            <h4>Vous pouvez gérer les utilisateurs dans l'onglet "Utilisateurs" ainsi que visionner des statistiques recueillies sur les différents modules dans l'onglet "Statistiques".</h4>
         </div>
     </div>
 
     <footer>
-        <?php include '../Footer.php'; ?>
+        <?php include '../Serveur/footer.php'; ?>
     </footer>
 </body>
 
@@ -51,5 +51,5 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
 
 <?php }
 else{
-    header('Location: ../SimFast-Accueil.php');
+    header('Location: ../index.php');
 }

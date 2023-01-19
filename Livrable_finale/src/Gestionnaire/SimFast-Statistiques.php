@@ -1,39 +1,39 @@
 <?php session_start();
-if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
+if (isset($_SESSION['login']) && $_SESSION['login'] == 'admin') {
     include '../Config/database.php';
     global $db;
-?>
+    ?>
 
 
-<!Doctype html>
-<html lang="fr">
+    <!Doctype html>
+    <html lang="fr">
 
-<head>
+    <head>
 
-    <title>SimFast - Statistiques</title>
-    <!-- Titre de la page -->
-    <meta charset="utf-8">
-    <!-- Permet au navigateur de traduire en une autre langue le site -->
-    <meta name="author" content="Antoine Bazire">
-    <!-- Nom de l'auteur du site -->
-    <link rel="shortcut icon" href="../Images/SimFast_logo.png" type="image/x-icon">
-    <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
-    <link rel="stylesheet" href="../style.css">
+        <title>SimFast - Statistiques</title>
+        <!-- Titre de la page -->
+        <meta charset="utf-8">
+        <!-- Permet au navigateur de traduire en une autre langue le site -->
+        <meta name="author" content="Antoine Bazire">
+        <!-- Nom de l'auteur du site -->
+        <link rel="shortcut icon" href="../Images/SimFast_logo.png" type="image/x-icon">
+        <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
+        <link rel="stylesheet" href="../Css/style.css">
 
-</head>
+    </head>
 
-<body>
+    <body>
     <div class="contenu">
         <div class='navigation'>
             <nav>
                 <ul>
-                    <li><a href='../deconnexion.php'>Se déconnecter</a></li>
+                    <li><a href='../Serveur/deconnexion.php'>Se déconnecter</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class='modules_navigation'>
-            <?php include 'Menu-Gestionnaire.php'; ?>
+            <?php include 'serveur/menu-gestionnaire.php'; ?>
         </div>
 
         <div class="Titre_module">
@@ -46,47 +46,48 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
             </div>
             <?php
             //Statistiques visiteurs
-            $stat_visite=$db->prepare("SELECT * FROM stats_visite");
+            $stat_visite = $db->prepare("SELECT * FROM stats_visite");
             $stat_visite->execute();
             $nbr_visiteurs_totaux = 0;
             $nbr_visiteurs_jour = 0;
             $nbr_visiteurs_semaine = 0;
-            while($resultat = $stat_visite->fetch(PDO::FETCH_ASSOC)):
-                if($resultat["date"] == "aujourd'hui")
-                    $nbr_visiteurs_jour +=1;
-                if($resultat["date"] <= "cette semaine")
-                    $nbr_visiteurs_semaine +=1;
-                $nbr_visiteurs_totaux+=1;
+            while ($resultat = $stat_visite->fetch(PDO::FETCH_ASSOC)):
+                if ($resultat["date"] == "aujourd'hui")
+                    $nbr_visiteurs_jour += 1;
+                if ($resultat["date"] <= "cette semaine")
+                    $nbr_visiteurs_semaine += 1;
+                $nbr_visiteurs_totaux += 1;
             endwhile;
 
-//            //Statistiques modules
-//            $stat_module=$db->prepare("SELECT * FROM stats_module");
-//            $stat_module->execute();
-//            $nbr_visiteurs_totaux = 0;
-//            $nbr_visiteurs_jour = 0;
-//            $nbr_visiteurs_semaine = 0;
-//            while($resultat = $stat_module->fetch(PDO::FETCH_ASSOC)):
-//                if($resultat["date"] == "aujourd'hui")
-//                    $nbr_visiteurs_jour +=1;
-//                if($resultat["date"] <= "cette semaine")
-//                    $nbr_visiteurs_semaine +=1;
-//                $nbr_visiteurs_totaux+=1;
-//            endwhile;
-//            ?>
+            //            //Statistiques modules
+            //            $stat_module=$db->prepare("SELECT * FROM stats_module");
+            //            $stat_module->execute();
+            //            $nbr_visiteurs_totaux = 0;
+            //            $nbr_visiteurs_jour = 0;
+            //            $nbr_visiteurs_semaine = 0;
+            //            while($resultat = $stat_module->fetch(PDO::FETCH_ASSOC)):
+            //                if($resultat["date"] == "aujourd'hui")
+            //                    $nbr_visiteurs_jour +=1;
+            //                if($resultat["date"] <= "cette semaine")
+            //                    $nbr_visiteurs_semaine +=1;
+            //                $nbr_visiteurs_totaux+=1;
+            //            endwhile;
+            //
+            ?>
 
             <div class="Statistiques_p">
-                <p>Nombre de visiteurs différents aujourd'hui : <?=$nbr_visiteurs_totaux?> </p>
-                <p>Nombre de visiteurs différents cette semaine : <?=$nbr_visiteurs?></p>
+                <p>Nombre de visiteurs différents aujourd'hui : <?= $nbr_visiteurs_totaux ?> </p>
+                <!--                <p>Nombre de visiteurs différents cette semaine : --><?//=$nbr_visiteurs
+                ?><!--</p>-->
             </div>
         </div>
     </div>
     <footer>
-        <?php include '../Footer.php'; ?>
+        <?php include '../Serveur/footer.php'; ?>
     </footer>
-</body>
+    </body>
 
-</html>
-<?php }
-else{
-    header('Location: ../SimFast-Accueil.php');
+    </html>
+<?php } else {
+    header('Location: ../index.php');
 }

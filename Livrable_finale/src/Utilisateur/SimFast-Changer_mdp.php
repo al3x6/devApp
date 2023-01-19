@@ -30,7 +30,7 @@ if(isset($_SESSION['login'])){
     <!-- Nom de l'auteur du site -->
     <link rel="shortcut icon" href="../Images/SimFast_logo.png" type="image/x-icon">
     <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Css/style.css">
 </head>
 
 <body>
@@ -44,7 +44,7 @@ if(isset($_SESSION['login'])){
 
         <div class="rectangle_blanc">
             <h3>Changer de mot de passe</h3>
-            <form action= "Password-change.php" method="post">
+            <form action= "serveur/password-change.php" method="post">
                 <div class="rectangle_blanc_content">
                     <input class="textfield" type="password" name="newmdp" placeholder="Nouveau mot de passe">
                     <br>
@@ -58,12 +58,12 @@ if(isset($_SESSION['login'])){
         </div>
     </div>
     <footer>
-        <?php include '../Footer.php'; ?>
+        <?php include '../Serveur/footer.php'; ?>
     </footer>
 </body>
 
 </html>
 <?php }
 else{
-    header('Location: ../SimFast-Accueil_utilisateur.php');
+    header('Location: ../index.php');
 }
