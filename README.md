@@ -7,12 +7,13 @@
 ## Description
 SIMFAST est une application web en PHP, MySQL et Python qui a pour but de mettre en place une plateforme pour la
 simulation de différents calculs dans des domaines différents :
-<ol>
+<ul>
     <li>• Informatique avec  la conversions binaire hexa, octal et décimal</li>
     <li>• Mathématiques avec le calcul d’une probabilité en loi Normale</li>
     <li>• Economie/Management avec le calcul d’amortissement d'un projet</li>
     <li>• Sécurité/cryptographie avec la mise en place d’un algorythme de cryptographie RC4/WEP</li>
-<ol>
+</ul>
+
 ## Visuals
 
 
