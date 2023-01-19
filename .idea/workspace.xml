@@ -1,57 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75d41ffc-b0c5-4372-ad19-40255953f9f0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Cinquième_Livrable/Dossier_du_Cinquième_livrable/4.Programmation/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/Cinquième_Livrable/Dossier_du_Cinquième_livrable/4.Programmation/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cinquième_Livrable/Dossier_du_Cinquième_livrable/4.Programmation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Cinquième_Livrable/Dossier_du_Cinquième_livrable/4.Programmation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cinquième_Livrable/Dossier_du_Cinquième_livrable/4.Programmation/Utilisateur/SimFast-Module_Crypto_Biblio.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cinquième_Livrable/Dossier_du_Cinquième_livrable/4.Programmation/Utilisateur/SimFast-Module_Crypto_Biblio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Captcha.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Connection.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Footer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Gestionnaire/Menu-Gestionnaire.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Gestionnaire/SimFast-Accueil_gestionnaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/Gestionnaire/SimFast-Accueil_gestionnaire.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Gestionnaire/SimFast-Gestion_utilisateurs.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/Gestionnaire/SimFast-Gestion_utilisateurs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Gestionnaire/SimFast-Log.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/Gestionnaire/SimFast-Log.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Gestionnaire/SimFast-Statistiques.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/Gestionnaire/SimFast-Statistiques.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Gestionnaire/Suppression.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Insert.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/SIMFAST.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/SimFast-Accueil.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/SimFast-Connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/SimFast-Connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/SimFast-Inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/SimFast-Inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/SimFast-Mdp_oublie.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/SimFast-Mdp_oublie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/Menu-Utilisateur.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/Password-change.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/SimFast-Accueil_utilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/SimFast-Accueil_utilisateur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/SimFast-Changer_mdp.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/SimFast-Changer_mdp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/SimFast-Module_Amortissement.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/SimFast-Module_Amortissement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/SimFast-Module_Conversion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/SimFast-Module_Conversion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/SimFast-Module_Crypto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/SimFast-Module_Crypto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/SimFast-Module_Probabilite.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/SimFast-Module_Probabilite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/SimFast-Profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/SimFast-Profil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/chiffrage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/conversion.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/dechiffrage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/depreciation_calcul.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/encrypt.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/graphe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/hexa_binaire.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/loi_normale.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/methode_rectangles.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/methode_simpson.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/methode_trapezes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Utilisateur/normal_law.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Validate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/Vidéos/Video_presentation.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/Vidéos/Video_presentation.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/deconnexion.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/functions.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Livrable_finale/src/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/phpinfo.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/test/tests.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/test/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Livrable_finale/src/test2.py" beforeDir="false" />
-    </list>
+    <list default="true" id="75d41ffc-b0c5-4372-ad19-40255953f9f0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,6 +42,7 @@
       <workItem from="1671368171422" duration="3000" />
       <workItem from="1671400532967" duration="110000" />
       <workItem from="1674162155913" duration="17000" />
+      <workItem from="1674162416036" duration="130000" />
     </task>
     <servers />
   </component>
