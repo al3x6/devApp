@@ -3,9 +3,6 @@
 </a>
 <nav>
     <ul>
-        <li><a href='SimFast-Module_Probabilite.php'>Calculateur de loi normale</a></li>
-        <li><a href='SimFast-Module_Crypto.php'>Chiffrement RC4</a></li>
-        <li><a href='SimFast-Module_Conversion.php'>Convertisseur décimal, hexadécimal, binaire</a></li>
-        <li><a href='SimFast-Module_Amortissement.php'>Calcul d'amortissement</a></li>
+        <li><a href='../index.php'>Menu utilisateur</a></li>
     </ul>
 </nav>

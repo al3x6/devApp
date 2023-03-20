@@ -19,6 +19,7 @@ body {
     /* Modifier les dimensions afin de remplir l'espace disponible */
     flex-direction: column;
     /* Enfants de la balise alignés en colonne */
+
 }
 
 .contenu {
@@ -27,24 +28,31 @@ body {
     /* grow : Grossir jusqu'à prendre toute l'espace disponible */
 }
 
-
-/* BARRE DE NAVIGATION */
+/********************************BARRE DE NAVIGATION***************************************/
 
 .navigation {
     text-align: right;
     /* Alignement du texte à droite */
     background-color: white;
+    filter: drop-shadow(0px 2px 10px rgb(50,50,50));
+    width: 100%;
+    z-index: 10;
+    position : fixed;
 }
-
+.navigation nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
 nav>ul>li {
     display: inline-block;
     /* Affichage en block sur une ligne */
     list-style: none;
     /* On enleve les points devant le texte des <li> */
-    padding: 8px;
+    padding: 10px;
     /* Espace entre sa bordure et le texte, toutes directions*/
     padding-inline-end: 40px;
-    /* ------------------------------------, en ligne et à la fin (à droite) */
+    /* ---------------------, en ligne et à la fin (à droite) */
     font-size: large;
     /* Grossir la police */
 }
@@ -60,14 +68,13 @@ li>a {
     text-align: center;
     /* Alignement central du texte*/
     background-color: rgb(42, 122, 187);
-    padding-top: 1%;
+    padding-top: 4%;
     /* Espace entre la bordure du haut et le texte */
     padding-bottom: 1%;
     /* -------------------------- bas -------------*/
     padding-inline: 12%;
     /* ------------ le texte et les bordures gauche et droite  */
-    margin-bottom: 2%;
-    /* Marge entre sa bordure du bas et la bordure du bas de la balise, classe parent */
+    position: sticky;
 }
 
 .modules_navigation ul {
@@ -80,15 +87,25 @@ li>a {
     justify-content: space-around;
     /* Même espace entourant les enfants */
 }
+.modules_navigation nav>ul>li{
+    transition-duration: 0.3s;
+}
+
+.modules_navigation nav>ul>li:hover{
+    /*passage de la souris*/
+    transform: scale(1.1);
+    font-weight: bold;
+}
 
 
-/* Logo */
+/*****************************Logo***********************************/
 
 .logo{
     /* <div> du logo */
     margin-top: 2%;
     /* marge entre sa bordure du haut et la bordure de la balise, classe parent  */
     text-align: center;
+    padding-top: 4%;
 }
 
 .logo>img,.logo>a>img{
@@ -105,7 +122,6 @@ li>a {
 
 .logo_miniature {
     max-width: 40px;
-    max-width: 40px;
     border-radius: 50px;
     filter: drop-shadow(4px 3px 1px rgba(12, 12, 12, 0.445));
     position: absolute;
@@ -115,7 +131,7 @@ li>a {
 }
 
 
-/* Texte de description */
+/*******************************Texte de description*******************/
 
 .texte_description_site {
     padding-inline: 15%;
@@ -131,13 +147,13 @@ p {
 }
 
 .Titre_module {
-    /* Titres des modules */
+    /* Titres des modules dans leur page respectif */
     text-align: center;
     margin-top: 5%;
 }
 
 
-/* Vidéo de présentation */
+/**************************Vidéo de présentation**************************/
 
 .video_presentation {
     /* <div> de la vidéo */
@@ -159,19 +175,80 @@ p {
 }
 
 
-/* footer */
+/***********************************footer***************************************/
 
 footer {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     padding-left: 5%;
     background-color: rgb(189, 189, 189);
     font-size: xx-small;
     /* Petite police d'écriture */
 }
 
+footer>a {
+    text-decoration: none;
+    /*enleve la decoration pour les liens du footeur*/
+    color: black;
+    /*le texte en noir pour les liens du footeur*/
+    font-size: x-small;
+    margin-left: 20px;
+}
 
-/* objets graphiques */
+/******************************Menu Utilisateur*******************************/
+
+.div_bouton_module{
+    text-align: center;
+}
+
+
+.div_bouton_module button{
+    border: 4px double black;
+    border-radius: 20px;
+    /*bordure des boutons*/
+    font-size: 18px;
+    /*taille caractère*/
+    background-color: rgba(230, 230, 230);
+    /*couleur arriere plan bouton*/
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    /*pointeur flèche*/
+    margin: 50px;
+    /*espace composant*/
+    filter: drop-shadow(7px 7px 4px rgb(109, 108, 108));
+    /*ombre des boutons*/
+    transition-duration: 1s;
+    /*durée de la transition (hover)*/
+    position: relative;
+    overflow: clip;
+    /*coupe le surplus de l'élément si il dépasse du border du parent*/
+}
+
+.div_bouton_module button:hover {
+    /*passage de la souris sur le bouton*/
+    background-color: rgb(63, 62, 62);
+    transform:scale(1.15);
+    /*zoom de 15% */
+}
+
+.div_bouton_module .titre_module{
+    background-color: white;
+    padding-top: 5%;
+    /*espacement vers le haut*/
+    padding-bottom: 5%;
+    /*espacement vers le bas*/
+    position: fixed;
+    /*position fixe*/
+    bottom: 0;
+    /*composant en bas du parent*/
+    width: 100%;
+    /*prend toute la largeur du parent*/
+    filter: drop-shadow(0px -0.5px 8px rgb(130, 130, 130));
+
+}
+
+/*********************objets graphiques********************/
 
 .rectangle_blanc {
     /* Contient le titre et des composants graphiques*/
@@ -275,7 +352,7 @@ footer {
 }
 
 
-/* Mot de passe oublie */
+/***********************Mot de passe oublie**************************/
 
 .Mdp_oublie h2,
 h4 {
@@ -285,7 +362,7 @@ h4 {
 }
 
 
-/* Module de prababilité */
+/************************Module de prababilité************************/
 
 .Module_proba {
     /* Contenu du module */
@@ -354,7 +431,7 @@ h4 {
     background-color: #fff;
 }
 
-/* Module Conversion */
+/********************************Module Conversion*********************/
 
 .Module_Conversion {
     /* Contenu du module */
@@ -415,7 +492,7 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     cursor: pointer;
 }
 
-/* Module d'amortissement */
+/***********************Module d'amortissement*********************/
 
 .Module_Amortissement {
     /* Contenu du module */
@@ -488,13 +565,14 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     cursor: pointer;
 }
 
-/* Module de crypto */
+/***************************Module de crypto***************************/
 .Crypto_content {
     display: flex;
     justify-content: space-evenly;
     align-content: center;
     background-color: #6ca4d9;
     height: 250px;
+    padding-bottom: 50px;
 }
 
 .Crypto_chiffrage form{
@@ -545,7 +623,77 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     font-weight: 500;
 }
 
-/* Gestion des utilisateurs */
+/************************Module de dérivée************************/
+
+.Module_deriv {
+    /* Contenu du module */
+    margin: auto;
+    width: 600px;
+    height: 500px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.Deriv_valeurs table {
+    /* Bloc contenant les valeurs à rentrer pour l'utilisateur */
+    margin: auto;
+    width: 75%;
+    height: 100px;
+    padding-top: 5%;
+}
+
+.Deriv_valeurs td {
+    /* Champs valeur 1,2,3,4 et zones de texte  */
+    margin-top: 50%;
+}
+
+.Deriv_valeurs input[type="submit"] {
+    border: 0px;
+    border-radius: 15px;
+    height: 35px;
+    width: 100px;
+    background-color: rgba(253, 54, 54, 0.459);
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.Deriv_valeurs td:nth-child(2n+1) {
+    /* Cellules impairs des lignes (Valeur 1, 2, 3, 4) */
+    text-align: right;
+    padding-right: 5px;
+}
+
+.Deriv_valeurs td:nth-child(2n) {
+    /* Cellules pairs des lignes (zones de texte */
+    text-align: left;
+}
+
+.Deriv_input_text {
+    /* Zones de texte */
+    border: none;
+    width: 100px;
+    height: 20px;
+}
+
+.Deriv_Resultat {
+    /* Bloc contenant les <textarea> et les <p> */
+    margin: auto;
+    margin-top: 20%;
+    margin-inline: 5%;
+}
+
+.Deriv_Resultat img{
+    width: 500px;
+    height: 300px;
+}
+
+.Deriv_Resultat .rectangle_vide{
+    width: 500px;
+    height: 300px;
+    background-color: #fff;
+}
+
+/***********************Gestion des utilisateurs*************************/
 
 .Table_gestion {
     /* Contenu de la page sous la barre de navigation */
@@ -595,7 +743,7 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
 }
 
 
-/* Statistiques */
+/*************************Statistiques**************************/
 
 .Statistiques_content {
     /* Contenu de la page sous la barre de navigation */
@@ -625,4 +773,132 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     flex-direction: row;
     justify-content: space-between;
     justify-content: space-around;
+}
+
+
+
+/*******************barre de recherche******************/
+.barre_recherche{
+    text-align: center;
+}
+
+#searchbar{
+    margin-bottom: 3%;
+    /*margin-top: 3%;*/
+    padding:15px;
+    border-radius: 10px;
+}
+
+.barre_recherche input[type=text] {
+    width: 10%;
+    -webkit-transition: width 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out;
+}
+
+/* change le focus quand on entre, la barre s'agrandi à 100% */
+.barre_recherche input[type=text]:focus {
+    width: 20%;
+}
+
+.domaine{
+    display: list-item;
+}
+
+/*******************Menu vertical des matières******************/
+
+.toggle_btn{
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    margin-left: 20px;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.toggle_btn span{
+    height:4px;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    border-radius: 2px;
+}
+
+.toggle_btn span:before{
+    content: '';
+    height: 4px;
+    background-color: black;
+    width: 100%;
+    position:absolute;
+    top: -250%;
+    left: 0px;
+    border-radius: 2px;
+}
+
+.toggle_btn span:after{
+    content: '';
+    height: 4px;
+    background-color: black;
+    width: 100%;
+    position:absolute;
+    top: 250%;
+    left: 0;
+    border-radius: 2px;
+}
+.position_sticky{
+    position: sticky;
+}
+.menu_vertical{
+    height: 100%;
+    background-color : rgb(61, 61, 61);
+    width: 200px;
+    /*fixe la position, l'élément ne bouge pas quand on scroll*/
+    top: 0;
+    z-index:8;
+    position: fixed;
+    /*Passage de l'élément au premier plan*/
+}
+
+.menu_vertical button {
+    color: whitesmoke;
+    font-family: sans-serif;
+    text-align: left;
+    padding-left: 20px;
+    background-color: transparent;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: transparent;
+    cursor: pointer;
+
+}
+.menu_vertical button:hover {
+    background-color: rgba(0, 0, 0, 0.404);
+
+}
+
+.titre_menu_vertical{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    font-family: sans-serif;
+    color: whitesmoke;
+
+}
+
+.nav_vertical {
+    margin-left: -200px;
+    transition-duration: 0.2s;
+    padding-top: 5%;
+
+}
+.nav_vertical_open{
+    margin-left: 0;
+    transition-duration:0.2s;
+    padding-top: 5%;
+    filter: drop-shadow(2px 0px 10px rgb(50,50,50));
+
+
 }

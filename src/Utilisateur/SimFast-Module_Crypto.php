@@ -70,10 +70,10 @@ if (isset($_SESSION['login'])) {
                 <a href="SimFast-Module_Crypto_Biblio.php" class="bibliotheque">Accéder à la bibliothèque</a>
             </div>
         </div>
-
-        <footer>
-            <?php include '../Serveur/footer.php'; ?>
-        </footer>
+    </div>
+    <footer>
+        <?php include '../Serveur/footer.php'; ?>
+    </footer>
     </body>
 
     </html>

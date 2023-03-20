@@ -1,7 +1,7 @@
 from scipy.stats import norm
 import matplotlib.pyplot as plt
 import sys
-from python.loi_normale import loi_normale
+from loi_normale import loi_normale
 import numpy as np
 
 def simpson(mu,sigma,quantile):
@@ -53,7 +53,7 @@ def graphe(mu,sigma,quantile):
     axe = np.linspace(-4, 4, 100)
     plt.plot(axe, norm.pdf(axe, mu, sigma))
     # plt.show()
-    plt.savefig('graphe.png')
+    plt.savefig('../img/graphe.png')
     return simpson(mu,sigma,quantile)
 
 if __name__ == '__main__':

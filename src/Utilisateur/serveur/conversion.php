@@ -75,4 +75,5 @@ if(isset($_POST["convertir"])){
     }
 }
 else
-    header("Location: ../SimFast-Module_Conversion.php"); /* rien a faire sur cette page
+    header("Location: ../SimFast-Module_Conversion.php"); /* rien a faire sur cette page*/
+?>

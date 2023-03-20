@@ -2,7 +2,7 @@
 
 from scipy.stats import norm
 import matplotlib.pyplot as plt
-from python.loi_normale import loi_normale
+from loi_normale import loi_normale
 import sys
 import numpy as np
 
@@ -40,7 +40,7 @@ def graphe(mu,sigma,quantile):
     axe = np.linspace(-4, 4, 100)
     plt.plot(axe, norm.pdf(axe, mu, sigma))
     # plt.show()
-    plt.savefig('graphe.png')
+    plt.savefig('../img/graphe.png')
     return methode_trapezes(mu,sigma,quantile)
 
 
