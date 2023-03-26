@@ -55,7 +55,7 @@ if(isset($_SESSION['login'])){
                             <option value="hexadecimal" <?php if(isset($_SESSION["choix1"]) && $_SESSION["choix1"] =="hexadecimal"){ echo "selected";}?>>hexadécimal</option>
                             <option value="binaire" <?php if(isset($_SESSION["choix1"]) && $_SESSION["choix1"] =="binaire"){ echo "selected";}?>>binaire</option>
                         </select>
-                        <input class="Conversion_reverse" type="submit" name="reverse" value="⇆">
+                        <input class="Conversion_reverse" id="Conversion_retour" type="submit" name="reverse" value="⇆">
                             <select class="input_select" name="choix_conversion2">
                                 <option value="decimal" <?php if(isset($_SESSION["choix2"]) && $_SESSION["choix2"] =="decimal"){ echo "selected";}?> >décimal</option>
                                 <option value="hexadecimal" <?php if(isset($_SESSION["choix2"]) && $_SESSION["choix2"] =="hexadecimal"){ echo "selected";}?>>hexadécimal </option>
@@ -63,8 +63,10 @@ if(isset($_SESSION['login'])){
                             </select>
                     </div>
                     <div class="Conversion_output">
-                        <input class="output_valeurs" type="text" name="output_val" value="<?php if(isset($_SESSION["valeur"])){ echo $_SESSION["valeur"];}?>">
-                        <input class="output_valeurs unmodifiable" type="text" value="<?php if(isset($_GET["conversion"])){ echo $_GET["conversion"];}?>">
+                        <label for="Conversion"></label>
+                        <input class="output_valeurs" id="Conversion" type="text" name="output_val" value="<?php if(isset($_SESSION["valeur"])){ echo $_SESSION["valeur"];}?>">
+                        <label for="Conversion_retour"></label>
+                        <input class="output_valeurs unmodifiable" id="Conversion_retour" type="text" value="<?php if(isset($_GET["conversion"])){ echo $_GET["conversion"];}?>">
                         <input type="submit" value="convertir" name="convertir">
                     </div>
                     </form>

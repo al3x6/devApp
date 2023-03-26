@@ -57,6 +57,8 @@ if (isset($_SESSION['login'])) {
         </div>
 
         <div class="barre_recherche">
+            <label for="searchbar">Recherche</label>
+            <br>
             <input id="searchbar" onkeyup="search_module()" type="text" name="search" placeholder="nom de domaine">
         </div>
 

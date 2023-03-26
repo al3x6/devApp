@@ -42,15 +42,15 @@ if(isset($_SESSION['login'])){
                 <form action="serveur/normal_law.php" method="post">
                     <table>
                         <tr>
-                            <td>μ (mu)</td>
-                            <td><input class="Proba_input_text" type="text" name="mu"></td>
+                            <td><label for="mu">μ (mu)</label></td>
+                            <td><input class="Proba_input_text" id="mu" type="text" name="mu"></td>
 
-                            <td>t (quantile)</td>
-                            <td><input class="Proba_input_text" type="text" name="t"></td>
+                            <td><label for="quantile">t (quantile)</label></td>
+                            <td><input class="Proba_input_text" id="quantile" type="text" name="t"></td>
                         </tr>
                         <tr>
-                            <td>σ (sigma)</td>
-                            <td><input class="Proba_input_text" type="text" name="sigma"></td>
+                            <td><label for="sigma">σ (sigma)</label></td>
+                            <td><input class="Proba_input_text" id="sigma" type="text" name="sigma"></td>
                             <td><input type="submit" name="valider" value="valider"></td>
                         </tr>
                     </table>

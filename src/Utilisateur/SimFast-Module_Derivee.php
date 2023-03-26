@@ -42,8 +42,8 @@ if (isset($_SESSION['login'])) {
                 <form action="serveur/derived.php" method="post">
                     <table>
                         <tr>
-                            <td>entrer une fonction f(x)=</td>
-                            <td><input class="Deriv_input_text" type="text" name="fonction"></td>
+                            <td><label for="entrer_fonction">entrer une fonction f(x)=</label></td>
+                            <td><input class="Deriv_input_text" id="entrer_fonction" type="text" name="fonction"></td>
                             <td><input type="submit" name="valider" value="valider"></td>
                         </tr>
                     </table>

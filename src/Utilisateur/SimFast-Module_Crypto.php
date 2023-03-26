@@ -40,10 +40,15 @@ if (isset($_SESSION['login'])) {
                     <form action="serveur/encrypt.php" method="post">
                         <h4>Chiffrement</h4>
                         <div class="Crypto_output">
-                            <input class="Crypto_textfiel_input" type="text" name="cle" placeholder="Clés"
+                            <label for="Cle">Entrer une cle</label>
+                            <br>
+                            <input class="Crypto_textfiel_input" id="Cle" type="text" name="cle" placeholder="Clés"
                                    value="<?php if (isset($_SESSION["cle"])) echo $_SESSION["cle"]; ?>">
+
+                            <label for="texte"> Entrer d'un texte </label>
+                            <br>
                             <span>
-                            <input class="Crypto_textfiel_input" type="text" name="texte" placeholder="Texte"
+                            <input class="Crypto_textfiel_input" id="texte" type="text" name="texte" placeholder="Texte"
                                    value="<?php if (isset($_SESSION["texte"])) echo $_SESSION["texte"]; ?>">
                             <select name="choix_chiffrement" class="">
                                 <option value="Chiffrage">Chiffrage</option>

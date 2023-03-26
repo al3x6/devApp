@@ -45,26 +45,26 @@ if (isset($_SESSION['login'])) {
             </nav>
         </div>
 
-        <div class='logo'>
+        <div class='logo' style="padding-top: 5%">
             <img src="Images/SimFast_logo.png" alt="SimFast_logo">
-        </div>
+    </div>
 
-        <div class='texte_description_site'>
-            <h3>Bienvenue !</h3>
-            <p>Simfast est une application web permettant à ses utilisateurs d'effectuer des simulations de calculs
-                facilement et rapidement ! Une fois inscrit (situé en haut à droite de la page) vous pourrez profiter de
-                toutes les fonctionnalités
-                de Simfast : Simuler des calculs d'amortissement pour vos projets, convertir des sommes en
-                décimal, hexadécimal, binaire ou encore faire des calculs utilisant la Loi Normale.
-                <br><br> Si vous souhaitez vous faire une idée de ce qu'est Simfast vous pouvez visionner la vidéo de
-                présentation ci-dessous. A bientôt !
-            </p>
-        </div>
-        <div class="video_presentation">
-            <video width="auto" height="auto" controls poster="Images/SimFast_logo.png">
-                <source src="Vidéos/Video_presentation.mp4" type="video/mp4">
-            </video>
-        </div>
+    <div class='texte_description_site'>
+        <h3>Bienvenue !</h3>
+        <p>Simfast est une application web permettant à ses utilisateurs d'effectuer des simulations de calculs
+            facilement et rapidement ! Une fois inscrit (situé en haut à droite de la page) vous pourrez profiter de
+            toutes les fonctionnalités
+            de Simfast : Simuler des calculs d'amortissement pour vos projets, convertir des sommes en
+            décimal, hexadécimal, binaire ou encore faire des calculs utilisant la Loi Normale.
+            <br><br> Si vous souhaitez vous faire une idée de ce qu'est Simfast vous pouvez visionner la vidéo de
+            présentation ci-dessous. A bientôt !
+        </p>
+    </div>
+    <div class="video_presentation">
+        <video width="auto" height="auto" controls poster="Images/SimFast_logo.png">
+            <source src="Vidéos/Video_presentation.mp4" type="video/mp4">
+        </video>
+    </div>
     </div>
     <footer>
         <?php include 'Serveur/footer.php'; ?>

@@ -2,7 +2,7 @@
 include '../Config/database.php';
 global $db;
 
-if (!empty($_POST['login']) and !empty($_POST['email'] and !empty($_POST['mdp'])) and !empty($_POST['mdp_confirme']) and !empty($_POST['captcha'])) {
+if (!empty($_POST['login']) and !empty($_POST['email']) and !empty($_POST['mdp']) and !empty($_POST['mdp_confirme']) and !empty($_POST['captcha'])) {
     $login = htmlspecialchars($_POST['login']);
     $email = htmlspecialchars($_POST['email']);
     $mot_de_passe = htmlspecialchars($_POST['mdp']);
@@ -10,7 +10,7 @@ if (!empty($_POST['login']) and !empty($_POST['email'] and !empty($_POST['mdp'])
     $capt = $_POST['captcha'];
     $result = $_POST['resultat'];
 
-    if ($capt == $result) { //Vérification du bon résultat de la multiplication de  la captcha
+    if ($capt == $result) { //Vérification du bon résultat de la multiplication de la captcha
         if (strlen($login) < 30) { //Vérification de la taille du login
             $reqLogin = $db->prepare("SELECT * FROM utilisateur WHERE login = ?");
             $reqLogin->execute(array($login));

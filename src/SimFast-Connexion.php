@@ -50,9 +50,11 @@ if(isset($_GET["error1"])){
             <h3>SE CONNECTER</h3>
             <form action="Serveur/connection.php" method="post">
                 <div class="rectangle_blanc_content">
-                    <input class="textfield" type="text" name="login" placeholder="Nom d'utilisateur / Adresse email" value="<?php if(isset($_POST['login'])){echo $_POST['login'];} ?>">
+                    <label for="Nom d'utilisateur"> Nom d'utilisateur</label>
+                    <input class="textfield" type="text" id="Nom d'utilisateur" name="login" placeholder="Nom d'utilisateur / Adresse email" value="<?php if(isset($_POST['login'])){echo $_POST['login'];} ?>">
                     <br>
-                    <input class="textfield" type="password" name="mdp" placeholder="Mot de passe">
+                    <label for="Mot de passe"> Mot de passe</label>
+                    <input class="textfield" id="Mot de passe" type="password" name="mdp" placeholder="Mot de passe">
                     <br>
                     <input class="bouton_submit" type="submit" name="connexion" value="Valider">
                 </div>

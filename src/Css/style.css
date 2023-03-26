@@ -105,8 +105,9 @@ li>a {
     margin-top: 2%;
     /* marge entre sa bordure du haut et la bordure de la balise, classe parent  */
     text-align: center;
-    padding-top: 4%;
+    padding-top: 5%;
 }
+
 
 .logo>img,.logo>a>img{
     /* Image du logo */
@@ -254,7 +255,7 @@ footer>a {
     /* Contient le titre et des composants graphiques*/
     margin-top: 2%;
     margin-inline: auto;
-    margin-bottom: 5%;
+    margin-bottom: 0%;
     width: 400px;
     min-height: 450px;
     background-color: white;
@@ -266,7 +267,7 @@ footer>a {
 .rectangle_blanc>h3 {
     /* Titre des pages */
     padding-top: 10%;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -274,7 +275,7 @@ footer>a {
     /* Contenu du rectangle blanc, et contient les textfields */
     min-height: 280px;
     width: 75%;
-    margin-top: 5%;
+    margin-top: 1%;
     margin-inline: auto;
     /* On aligne l'espacement vertical entre les textfields */
     display: flex;
@@ -287,13 +288,13 @@ footer>a {
     border: none;
     background-color: rgb(202, 202, 202);
     color: black;
-    padding: 4%;
-
+    padding: 6%;
 }
 
 .unmodifiable{
     pointer-events:none;
 }
+
 .bouton_submit {
     /* Bouton Valider */
     border: 0px;

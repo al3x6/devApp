@@ -50,19 +50,23 @@ if (isset($_GET['error5'])) {
         <h3>S'INSCRIRE</h3>
         <form action="Serveur/insert.php" method="post">
             <div class="rectangle_blanc_content">
-                <input class="textfield" type="text" name="login" placeholder="Nom d'utilisateur"
-                       value="<?php if (isset($_POST['login'])) {
+                <label for="Nom d'utilisateur">Nom d'utilisateur</label>
+                <input class="textfield" id="Nom d'utilisateur" type="text" name="login" placeholder="Nom d'utilisateur"
+                       value="<?php if(isset($_POST['login'])) {
                            echo $_POST['login'];
                        } ?>">
                 <br>
-                <input class="textfield" type="email" name="email" placeholder="Adresse email"
-                       value="<?php if (isset($_POST['email'])) {
+                <label for="Adresse email">Adresse email</label>
+                <input class="textfield" id="Adresse email" type="email" name="email" placeholder="Adresse email"
+                       value="<?php if(isset($_POST['email'])) {
                            echo $_POST['email'];
                        } ?>">
                 <br>
-                <input class="textfield" type="password" name="mdp" placeholder="Mot de passe">
+                <label for="Mot de passe">Mot de passe</label>
+                <input class="textfield" id="Mot de passe" type="password" name="mdp" placeholder="Mot de passe">
                 <br>
-                <input class="textfield" type="password" name="mdp_confirme" placeholder="Confirmation mot de passe">
+                <label for="Mot de passe à confirmer">Mot de passe à confirmer</label>
+                <input class="textfield" id="Mot de passe à confirmer" type="password" name="mdp_confirme" placeholder="Confirmation mot de passe">
                 <br>
                 <h3>Captcha</h3>
                 <?php
@@ -72,8 +76,10 @@ if (isset($_GET['error5'])) {
                 $resultat = $prem * $deux;
                 ?>
 
-                <input type="hidden" name="resultat" value="<?php echo $resultat; ?>"/>
-                <input name="captcha" type="text">
+                <input type="hidden" name="resultat" value="<?php echo $resultat;?>"/>
+                <br>
+                <label for="Resultat">Resultat</label>
+                <input class="textfield" id="Resultat" name="captcha" type="text" placeholder="Resultat">
                 <br>
                 <input class="bouton_submit" type="submit" name="inscription" value="Valider">
             </div>
