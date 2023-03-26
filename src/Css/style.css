@@ -572,7 +572,7 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     justify-content: space-evenly;
     align-content: center;
     background-color: #6ca4d9;
-    height: 250px;
+    height: 400px;
     padding-bottom: 50px;
 }
 
@@ -585,36 +585,81 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     gap: 15px;
 }
 
-.Crypto_output{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.Crypto_output {
+    margin-bottom: 20px;
 }
-.Crypto_output span{
-    display: flex;
-    width: 100%;
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
-.Crypto_output input[type="text"]{
-    width: 250px;
-    height: 20px;
-    border-radius: 5px;
-    border: none;
+
+.Crypto_textfiel_input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
     margin-bottom: 10px;
 }
-.Crypto_output select{
-    height: 20px;
-    border-radius: 5px;
-    border: none;
-    margin-left: 5px;
+
+.Crypto_output input[type=text] {
+    -webkit-transition: width 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out;
 }
-.Crypto_output input[type="submit"], .Crypto_output input[type="button"]{
-    border: 0px;
-    border-radius: 15px;
+
+.Crypto_output input[type=text]:focus {
+    width: 150%;
+}
+
+/* Selection du dechiffrage/chiffrage */
+.Crypto_select_input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Division des boutons */
+.Crypto_button_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.Crypto_button_container input[type="button"] {
+    margin-left: 10px;
+}
+
+.Crypto_submit_button {
+    background-color: rgba(253, 54, 54, 0.459);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    text-decoration: none;
     height: 35px;
     width: 100px;
-    background-color: rgba(253, 54, 54, 0.459);
-    cursor: pointer;
-    margin-left: 10px;
+}
+
+.Crypto_submit_button:hover {
+    background-color: black;
+}
+
+/*Message*/
+.Crypto_error_message {
+    color: #ff0000;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 .Crypto_content .bibliotheque{

@@ -40,26 +40,26 @@ if (isset($_SESSION['login'])) {
                     <form action="serveur/encrypt.php" method="post">
                         <h4>Chiffrement</h4>
                         <div class="Crypto_output">
-                            <label for="Cle">Entrer une cle</label>
-                            <br>
-                            <input class="Crypto_textfiel_input" id="Cle" type="text" name="cle" placeholder="Clés"
+                            <label for="Cle">Entrer une clé :</label>
+                            <input class="Crypto_textfiel_input" id="Cle" type="text" name="cle" placeholder="Clé"
                                    value="<?php if (isset($_SESSION["cle"])) echo $_SESSION["cle"]; ?>">
-
-                            <label for="texte"> Entrer d'un texte </label>
                             <br>
-                            <span>
+                            <label for="texte">Entrer un texte :</label>
                             <input class="Crypto_textfiel_input" id="texte" type="text" name="texte" placeholder="Texte"
                                    value="<?php if (isset($_SESSION["texte"])) echo $_SESSION["texte"]; ?>">
-                            <select name="choix_chiffrement" class="">
+
+                            <select name="choix_chiffrement" class="Crypto_select_input">
                                 <option value="Chiffrage">Chiffrage</option>
-                                <option value="dechiffrage">Dechiffrage</option>
+                                <option value="dechiffrage">Déchiffrage</option>
                             </select>
-                            </span>
-                            <span>
-                            <input type="submit" name="chiffrage" value="valider">
-                            <a href="serveur/insert_library.php"><input type="button" value="enregistrer"></a>
-                            </span>
-                            <p class="error"><?php if (isset($err)) echo $err; ?></p>
+
+                            <br>
+                            <div class="Crypto_button_container">
+                                <input type="submit" name="chiffrage" value="Valider" class="Crypto_submit_button">
+                                <a href="serveur/insert_library.php"><input type="button" class="Crypto_submit_button"
+                                                                            value="Enregistrer"></a>
+                            </div>
+                            <p class="Crypto_error_message"><?php if (isset($err)) echo $err; ?></p>
                         </div>
                     </form>
                     <!--Partie enregistrement dans la bibliothèque-->

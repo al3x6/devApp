@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75d41ffc-b0c5-4372-ad19-40255953f9f0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Utilisateur/serveur/insert_library.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilisateur/serveur/insert_library.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utilisateur/SimFast-Module_Crypto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilisateur/SimFast-Module_Crypto.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +51,7 @@
       <workItem from="1674912315569" duration="48000" />
       <workItem from="1674912436531" duration="743000" />
       <workItem from="1679831955697" duration="1068000" />
-      <workItem from="1679844283603" duration="9322000" />
+      <workItem from="1679844283603" duration="14248000" />
     </task>
     <servers />
   </component>
