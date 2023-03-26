@@ -1,27 +1,27 @@
 <?php session_start();
-    if(isset($_SESSION['login'])){
-?>
+if (isset($_SESSION['login'])) {
+    ?>
 
 
-<!Doctype html>
-<html lang="fr">
+    <!Doctype html>
+    <html lang="fr">
 
-<head>
+    <head>
 
-    <title>SimFast - Accueil Utilisateur</title>
-    <!-- Titre de la page -->
-    <meta charset="utf-8">
-    <!-- Permet au navigateur de traduire en une autre langue le site -->
-    <meta name="author" content="Antoine Bazire">
-    <!-- Nom de l'auteur du site -->
-    <link rel="shortcut icon" href="../Images/SimFast_logo.png" type="image/x-icon">
-    <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
-    <link rel="stylesheet" href="../Css/style.css">
-    <script src="javaScript/search_module.js"></script>
+        <title>SimFast - Accueil Utilisateur</title>
+        <!-- Titre de la page -->
+        <meta charset="utf-8">
+        <!-- Permet au navigateur de traduire en une autre langue le site -->
+        <meta name="author" content="Antoine Bazire">
+        <!-- Nom de l'auteur du site -->
+        <link rel="shortcut icon" href="../Images/SimFast_logo.png" type="image/x-icon">
+        <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
+        <link rel="stylesheet" href="../Css/style.css">
+        <script src="javaScript/search_module.js"></script>
 
-</head>
+    </head>
 
-<body>
+    <body>
     <div class="contenu">
         <div class='navigation'>
             <nav>
@@ -50,7 +50,9 @@
         </div>
 
         <div class='texte_description_site'>
-            <h3>Bienvenue <?php if(isset($_SESSION["login"])){ echo $_SESSION["login"];} ?> !</h3>
+            <h3>Bienvenue <?php if (isset($_SESSION["login"])) {
+                    echo $_SESSION["login"];
+                } ?> !</h3>
             <h4>Vous pouvez utiliser les modules disponibles sur Simfast à volonté.</h4>
         </div>
 
@@ -59,18 +61,33 @@
         </div>
 
 
-
         <div class="div_bouton_module">
-            <h5 class="domaine"> Mathématiques </h5>
-            <button onclick="window.location.href='SimFast-Module_Probabilite.php';"><div class="titre_module">Calculateur de loi normale</div></button>
-            <button onclick="window.location.href='SimFast-Module_Derivee.php';"><div class="titre_module">Calcul de dérivée</div></button>
+            <div class="domaine">
+                <h5> Mathématiques </h5>
+                <button onclick="window.location.href='SimFast-Module_Probabilite.php';">
+                    <div class="titre_module">Calculateur de loi normale</div>
+                </button>
+                <button onclick="window.location.href='SimFast-Module_Derivee.php';">
+                    <div class="titre_module">Calcul de dérivée</div>
+                </button>
+            </div>
 
-            <h5 class="domaine"> Informatique </h5>
-            <button onclick="window.location.href='SimFast-Module_Crypto.php';"><div class="titre_module">Chiffrement RC4</div></button>
-            <button onclick="window.location.href='SimFast-Module_Conversion.php';"><div class="titre_module">Convertisseur de base</div></button>
+            <div class="domaine">
+                <h5> Informatique </h5>
+                <button onclick="window.location.href='SimFast-Module_Crypto.php';">
+                    <div class="titre_module">Chiffrement RC4</div>
+                </button>
+                <button onclick="window.location.href='SimFast-Module_Conversion.php';">
+                    <div class="titre_module">Convertisseur de base</div>
+                </button>
+            </div>
 
-            <h5 class="domaine"> Gestion </h5>
-            <button onclick="window.location.href='SimFast-Module_Amortissement.php';"><div class="titre_module">Calcul d'amortissement</div></button>
+            <div class="domaine">
+                <h5> Gestion </h5>
+                <button onclick="window.location.href='SimFast-Module_Amortissement.php';">
+                    <div class="titre_module">Calcul d'amortissement</div>
+                </button>
+            </div>
         </div>
     </div>
     <footer>
@@ -79,10 +96,9 @@
 
     <script type="text/javascript" src="javaScript/menu_vertical.js"></script>
 
-</body>
+    </body>
 
-</html>
-    <?php }
-    else{
-        header('Location: ../index.php');
-    }
+    </html>
+<?php } else {
+    header('Location: ../index.php');
+}
