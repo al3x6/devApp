@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75d41ffc-b0c5-4372-ad19-40255953f9f0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Serveur/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serveur/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimFast-Connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimFast-Connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimFast-Inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimFast-Inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utilisateur/SimFast-Accueil_utilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilisateur/SimFast-Accueil_utilisateur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utilisateur/SimFast-Module_Conversion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilisateur/SimFast-Module_Conversion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utilisateur/SimFast-Module_Crypto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilisateur/SimFast-Module_Crypto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utilisateur/SimFast-Module_Derivee.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilisateur/SimFast-Module_Derivee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utilisateur/SimFast-Module_Probabilite.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilisateur/SimFast-Module_Probabilite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utilisateur/img/graphe.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilisateur/img/graphe.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utilisateur/serveur/insert_library.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilisateur/serveur/insert_library.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +49,7 @@
       <workItem from="1674912315569" duration="48000" />
       <workItem from="1674912436531" duration="743000" />
       <workItem from="1679831955697" duration="1068000" />
-      <workItem from="1679844283603" duration="8810000" />
+      <workItem from="1679844283603" duration="9322000" />
     </task>
     <servers />
   </component>
