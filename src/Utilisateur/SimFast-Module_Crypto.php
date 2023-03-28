@@ -33,6 +33,7 @@ if (isset($_SESSION['login'])) {
         </div>
         <div class="Titre_module">
             <h3>Cryptographie</h3>
+            <br>
         </div>
         <div class="Module_Crypto">
             <div class="Crypto_content">
