@@ -1,7 +1,7 @@
 <?php session_start();
 include '../Config/database.php';
 global $db;
-if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
+if(isset($_SESSION['login']) && $_SESSION['login'] == 'gestion' ){
 ?>
 
 

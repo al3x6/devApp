@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="75d41ffc-b0c5-4372-ad19-40255953f9f0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gestionnaire/SimFast-Accueil_gestionnaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gestionnaire/SimFast-Accueil_gestionnaire.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gestionnaire/SimFast-Log.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Administrateur/SimFast-Log.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gestionnaire/log/echecs_connexion.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/Administrateur/log/echecs_connexion.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gestionnaire/serveur/menu-gestionnaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gestionnaire/serveur/menu-gestionnaire.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gestionnaire/serveur/suppression.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gestionnaire/serveur/suppression.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Serveur/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serveur/connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimFast-Connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimFast-Connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gestionnaire/SimFast-Gestion_utilisateurs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gestionnaire/SimFast-Gestion_utilisateurs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gestionnaire/SimFast-Statistiques.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gestionnaire/SimFast-Statistiques.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +63,7 @@
       <workItem from="1679844283603" duration="14541000" />
       <workItem from="1680002673928" duration="3030000" />
       <workItem from="1680077481706" duration="612000" />
-      <workItem from="1680337366436" duration="2802000" />
+      <workItem from="1680337366436" duration="3438000" />
     </task>
     <servers />
   </component>

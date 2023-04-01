@@ -1,5 +1,5 @@
 <?php session_start();
-if (isset($_SESSION['login']) && $_SESSION['login'] == 'admin') {
+if (isset($_SESSION['login']) && $_SESSION['login'] == 'gestion') {
     include '../Config/database.php';
     global $db;
     ?>
@@ -76,9 +76,8 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 'admin') {
             ?>
 
             <div class="Statistiques_p">
-                <p>Nombre de visiteurs différents aujourd'hui : <?= $nbr_visiteurs_totaux ?> </p>
-                <!--                <p>Nombre de visiteurs différents cette semaine : --><?//=$nbr_visiteurs
-                ?><!--</p>-->
+                <p>Nombre de visiteurs totaux : <?= $nbr_visiteurs_totaux ?> </p>
+                <p>Nombre de visiteurs différents aujourd'hui: <?=$nbr_visiteurs?></p>
             </div>
         </div>
     </div>
