@@ -27,13 +27,13 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 'admin') {
     </div>
 
     <div class='modules_navigation'>
-        <?php include 'serveur/menu-gestionnaire.php'; ?>
+        <?php include 'serveur/menu-administrateur.php'; ?>
     </div>
     <div class="Titre_module">
         <h3>Connexions echouées </h3>
     </div>
 
-    <form action="serveur/suppression.php" method="post">
+    <form action="../Gestionnaire/serveur/suppression.php" method="post">
         <div class="Table_gestion">
             <table>
                 <tr>

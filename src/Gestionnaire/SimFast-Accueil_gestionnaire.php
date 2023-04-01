@@ -1,5 +1,5 @@
 <?php session_start();
-if(isset($_SESSION['login']) && $_SESSION['login'] == 'admin' ){
+if(isset($_SESSION['login']) && $_SESSION['login'] == 'gestion' ){
 ?>
 
 <!Doctype html>

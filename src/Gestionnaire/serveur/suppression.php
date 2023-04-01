@@ -12,5 +12,4 @@ if (isset($_POST['suppression'])) {
     }
     $_SESSION['status'] = "Suppression réussie";
     header("Location: ../SimFast-Gestion_utilisateurs.php");
-
 }

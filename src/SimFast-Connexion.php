@@ -15,7 +15,7 @@ if(isset($_GET["error1"])){
         $mdp_incorrect = $_SESSION['mdp_incorrect'];
         $ip = $_SERVER['REMOTE_ADDR'];
 
-        $failed_login_log = 'Gestionnaire/log/echecs_connexion.log';
+        $failed_login_log = 'Administrateur/log/echecs_connexion.log';
         $log_file = fopen($failed_login_log, "a") or die("Impossible d'ouvrir le fichier");
         fwrite($log_file, $login_incorrect. " " . $mdp_incorrect. " " . $ip . " ". date("Y-m-d H:i:s") . "\n");
         fclose($log_file);

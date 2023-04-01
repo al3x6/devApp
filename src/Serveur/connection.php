@@ -25,9 +25,14 @@ if (!empty($_POST['login']) and !empty($_POST['mdp'])) {
         }
         $hashpassword = $result['mdp'];
         if (password_verify($mot_de_passe, $hashpassword)) {
-            if ($login == "admin" or $login == "admin@gmail.com") {
+            if ($login == "gestion" or $login == "gestion@gmail.com") {
                 $_SESSION['login'] = $result['login'];
                 header("Location: ../Gestionnaire/SimFast-Accueil_gestionnaire.php");
+                exit;
+            } elseif($login == "admin" or $login == "admin@gmail.com") {
+                $_SESSION['login'] = $result['login'];
+                header("Location: ../Administrateur/SimFast-Accueil_administrateur.php");
+                exit;
             } else {
                 $_SESSION['login'] = $result['login'];
                 $_SESSION['email'] = $result['email'];
