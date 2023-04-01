@@ -45,18 +45,28 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 'gestion') {
                 <textarea class="stats_modules_graphe" name="stats_modules_graphe"></textarea>
             </div>
             <?php
-            //Statistiques visiteurs
+            //Statistiques visiteurs totaux
             $stat_visite = $db->prepare("SELECT * FROM stats_visite");
             $stat_visite->execute();
             $nbr_visiteurs_totaux = 0;
-            $nbr_visiteurs_jour = 0;
-            $nbr_visiteurs_semaine = 0;
             while ($resultat = $stat_visite->fetch(PDO::FETCH_ASSOC)):
-                if ($resultat["date"] == "aujourd'hui")
-                    $nbr_visiteurs_jour += 1;
-                if ($resultat["date"] <= "cette semaine")
-                    $nbr_visiteurs_semaine += 1;
                 $nbr_visiteurs_totaux += 1;
+            endwhile;
+
+            //Statistiques visiteurs par jour
+            $stat_visite_jour = $db->prepare("SELECT * FROM stats_visite WHERE DATE(date)=CURDATE()");
+            $stat_visite_jour->execute();
+            $nbr_visiteurs_jour = 0;
+            while ($resultat = $stat_visite_jour->fetch(PDO::FETCH_ASSOC)):
+                $nbr_visiteurs_jour += 1;
+            endwhile;
+
+            //Statistiques visiteurs par semaine
+            $stat_visite_semaine = $db->prepare("SELECT * FROM stats_visite WHERE YEARWEEK(date)=YEARWEEK(NOW())");
+            $stat_visite_semaine->execute();
+            $nbr_visiteurs_semaine = 0;
+            while ($resultat = $stat_visite_semaine->fetch(PDO::FETCH_ASSOC)):
+                $nbr_visiteurs_semaine += 1;
             endwhile;
 
             //            //Statistiques modules
@@ -77,7 +87,8 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 'gestion') {
 
             <div class="Statistiques_p">
                 <p>Nombre de visiteurs totaux : <?= $nbr_visiteurs_totaux ?> </p>
-                <p>Nombre de visiteurs différents aujourd'hui: <?=$nbr_visiteurs?></p>
+                <p>Nombre de visiteurs aujourd'hui: <?= $nbr_visiteurs_jour ?></p>
+                <p>Nombre de visiteurs cette semaine: <?= $nbr_visiteurs_semaine ?></p>
             </div>
         </div>
     </div>
