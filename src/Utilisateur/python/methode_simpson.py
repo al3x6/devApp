@@ -5,6 +5,17 @@ from loi_normale import loi_normale
 import numpy as np
 
 def simpson(mu,sigma,quantile):
+    """Fonction densité avec la méthode de Simpson
+
+    Args:
+        mu (int): moyenne
+        sigma (int): écart-type
+        quantile (int): valeur maximum de la densité
+
+    Returns:
+        int: densité
+    """
+
     n=1000000
     a=0
     x=a
@@ -49,6 +60,16 @@ def simpson(mu,sigma,quantile):
     
 
 def graphe(mu,sigma,quantile):
+    """Dessine le graphique de la fonction
+
+    Args:
+        mu (int): moyenne
+        sigma (int): écart-type
+        quantile (int): valeur maximum de la densité
+
+    Returns:
+        int: résultat de la fonction simpson
+    """
     plt.clf()
     axe = np.linspace(-4, 4, 100)
     plt.plot(axe, norm.pdf(axe, mu, sigma))

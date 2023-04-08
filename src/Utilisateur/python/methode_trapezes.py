@@ -7,6 +7,17 @@ import sys
 import numpy as np
 
 def methode_trapezes(mu,sigma,quantile):
+    """Fonction densité avec la méthode des trapezes
+
+    Args:
+        mu (int): moyenne
+        sigma (int): écart-type
+        quantile (int): valeur maximum de la densité
+
+    Returns:
+        int: densité
+    """
+
     n = 1000000
     resultat=0
     a = 0
@@ -36,6 +47,17 @@ def methode_trapezes(mu,sigma,quantile):
 
 
 def graphe(mu,sigma,quantile):
+    """Dessine le graphique de la fonction
+
+    Args:
+        mu (int): moyenne
+        sigma (int): écart-type
+        quantile (int): valeur maximum de la densité
+
+    Returns:
+        int: résultat de la fonction methode_trapezes
+    """
+
     plt.clf()
     axe = np.linspace(-4, 4, 100)
     plt.plot(axe, norm.pdf(axe, mu, sigma))

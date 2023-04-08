@@ -1,7 +1,14 @@
 import sys
 
 def permutation(key):
-    """Initialise s pour l'algorithme RC4 en utilisant la clé donnée en ASCII"""
+    """Initialise la liste de permutation en utilisant une chaine de charactère en ASCII
+
+    Args:
+        key (String): Mot pour faire la permutation
+
+    Returns:
+        List: Liste de permutation
+    """
     s = list(range(256))
     j = 0
     for i in range(256):
@@ -10,7 +17,15 @@ def permutation(key):
     return s
 
 def rc4(s, length):
-    """Génère une clé de la longueur donnée en utilisant s"""
+    """Génère une clé de déchiffrage de la longueur donnée en utilisant la liste de permuation
+
+    Args:
+        s (List): Liste de permutation
+        length (String): mot dont on prendra ça longueur
+
+    Returns:
+        [Liste]: Clé de déchiffrage
+    """
     i = 0
     j = 0
     keystream = []
@@ -22,7 +37,14 @@ def rc4(s, length):
     return keystream
 
 def decryptage(ciphertext, key):
-    """Déchiffre le texte chiffré donné (en hexadécimal) en utilisant la clé donnée dans ASCII et renvoie le texte en clair
+    """Déchiffre en ascii le message ciphertext grâce à la clé de déchiffrage key
+
+    Args:
+        ciphertext (String): Message chiffré
+        key (List): Clé de chiffrement
+
+    Returns:
+        String: Mot chiffré en ascii
     """
     ciphertext = bytes.fromhex(ciphertext)
     state = permutation(key)
@@ -31,12 +53,24 @@ def decryptage(ciphertext, key):
     return "".join(plaintext)
 
 def enregistrer_fichier(ciphertext, fichier):
-    """Enregistre le texte chiffré donné (en hexadécimal) dans le fichier spécifié"""
+    """Enregistre le texte chiffré donné (en hexadécimal) dans le fichier spécifié
+
+    Args:
+        ciphertext (String): Message chiffré
+        fichier (File): Fichier dans lequel on enregistre
+    """
     with open(fichier, "w") as f:
         f.write(ciphertext)
 
 def lire_fichier(fichier):
-    """Lire le texte chiffré (en hexadécimal) à partir du fichier spécifié et le renvoyer"""
+    """Lire le texte chiffré (en hexadécimal) à partir du fichier spécifié et le renvoyer
+
+    Args:
+        fichier (File): Fichier à lire
+
+    Returns:
+        String: le message chiffré
+    """
     with open(fichier, "r") as f:
         return f.read()
 

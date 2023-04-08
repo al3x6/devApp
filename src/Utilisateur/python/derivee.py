@@ -4,6 +4,14 @@ import numpy as np
 import sys
 
 def derivative(function):
+    """ Calcule la dérivée de la fonction
+
+    Args:
+        function (int): sqrt(x)
+
+    Returns:
+        int: résultat de la dérivé
+    """
     x = Symbol('x')                 # On déclare x comme variable symbolique
     return diff(function, x)        # On utilise la fonction diff pour calculer la dérivée de la fonction par rapport à x
 
@@ -11,6 +19,14 @@ def derivative(function):
 #print(derivative(function))
 
 def afficher_courbe(function):
+    """Affiche la courbe de la fonction derivate
+
+    Args:
+        function (int): sqrt(x)
+
+    Returns:
+        int: résultat de la dérivé
+    """
     plt.clf()
     x = Symbol('x')
     y = parse_expr(function)

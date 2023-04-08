@@ -8,6 +8,17 @@ import numpy as np
 
 
 def methode_rectangles(mu, sigma, quantile):
+    """Fonction densité avec la méthode des rectangles
+
+    Args:
+        mu (int): moyenne
+        sigma (int): écart-type
+        quantile (int): valeur maximum de la densité
+
+    Returns:
+        int: densité
+    """
+
     n = 1000000  # Nbr de division (rectangles)
     resultat = 0  # C'est la somme
     a = 0  # a: borne minimum, limite inferieur alpha de l'intervalle [a;b]
@@ -37,6 +48,16 @@ def methode_rectangles(mu, sigma, quantile):
 
 
 def graphe(mu, sigma, quantile):
+    """Dessine le graphique de la fonction
+
+    Args:
+        mu (int): moyenne
+        sigma (int): écart-type
+        quantile (int): valeur maximum de la densité
+
+    Returns:
+        int: résultat de la fonction methode_rectangle
+    """
     plt.clf()
     interval = np.arange(mu - 4, quantile, 0.2)  # Intervalle pour les rectangles
     axe = np.linspace(mu - 6, mu + 4, 100)  # tracage de la courbe, et de l'axe
