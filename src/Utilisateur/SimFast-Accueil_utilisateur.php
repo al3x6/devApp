@@ -27,6 +27,7 @@ if (isset($_SESSION['login'])) {
             <nav>
                 <ul>
                     <div class="toggle_btn">
+                        <!-- image pour le bouton du menu -->
                         <span></span>
                     </div>
                     <li><a href='SimFast-Profil.php'>Profil</a></li>
@@ -35,14 +36,16 @@ if (isset($_SESSION['login'])) {
             </nav>
         </div>
 
-
         <div class="menu_vertical nav_vertical">
             <h4 class="titre_menu_vertical">Matières</h4>
-            <button onclick="window.location.href='#'">Tous les modules</button>
-            <button onclick="window.location.href='#'">Gestion</button>
-            <button onclick="window.location.href='#'">Informatique</button>
-            <button onclick="window.location.href='#'">Mathématiques</button>
-            <button onclick="window.location.href='#'">Probabilités</button>
+            <p>Mathématiques</p>
+            <button onclick="window.location.href='SimFast-Module_Probabilite.php'">Probabilités</button>
+            <button onclick="window.location.href='SimFast-Module_Derivee.php'">Dérivée</button>
+            <p> Informatique </p>
+            <button onclick="window.location.href='SimFast-Module_Crypto.php'">Chiffrement</button>
+            <button onclick="window.location.href='SimFast-Module_Conversion.php'">Convertisseur</button>
+            <p>Gestion</p>
+            <button onclick="window.location.href='SimFast-Module_Amortissement.php'">Amortissement</button>
         </div>
 
         <div class='logo'>

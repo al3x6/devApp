@@ -891,7 +891,9 @@ label {
 
 /*******************Menu vertical des matières******************/
 
+/*Pour le  bouton image du menu*/
 .toggle_btn{
+    /*image du bouton du menu*/
     height: 40px;
     width: 40px;
     position: fixed;
@@ -931,9 +933,13 @@ label {
     left: 0;
     border-radius: 2px;
 }
+
 .position_sticky{
     position: sticky;
 }
+/* */
+
+/* Pour le menu lorsqu'il est ouvert */
 .menu_vertical{
     height: 100%;
     background-color : rgb(61, 61, 61);
@@ -956,11 +962,10 @@ label {
     padding-bottom: 10px;
     border: transparent;
     cursor: pointer;
-
 }
+
 .menu_vertical button:hover {
     background-color: rgba(0, 0, 0, 0.404);
-
 }
 
 .titre_menu_vertical{
@@ -970,16 +975,19 @@ label {
     text-align: center;
     font-family: sans-serif;
     color: whitesmoke;
-
 }
+/*  */
 
+/*Pour java script ouvre et ferme le menu*/
 .nav_vertical {
+    /* menu fermé */
     margin-left: -200px;
     transition-duration: 0.2s;
     padding-top: 5%;
-
 }
+
 .nav_vertical_open{
+    /*menu ouvert */
     margin-left: 0;
     transition-duration:0.2s;
     padding-top: 5%;

@@ -18,6 +18,7 @@ if(isset($_SESSION['login'])){
     <link rel="shortcut icon" href="../Images/SimFast_logo.png" type="image/x-icon">
     <!-- Mettre une icon du site (photo dans le répertoire courant et preferable .ico)-->
     <link rel="stylesheet" href="../Css/style.css">
+    <script src="javaScript/search_module.js"></script>
 
 </head>
 
@@ -27,10 +28,26 @@ if(isset($_SESSION['login'])){
         <div class='navigation'>
             <nav>
                 <ul>
+                    <div class="toggle_btn">
+                        <!-- image pour le bouton du menu -->
+                        <span></span>
+                    </div>
                     <li><a href='SimFast-Profil.php'>Profil</a></li>
                     <li><a href='../Serveur/deconnexion.php'>Se déconnecter</a></li>
                 </ul>
             </nav>
+        </div>
+
+        <div class="menu_vertical nav_vertical">
+            <h4 class="titre_menu_vertical">Matières</h4>
+            <p>Mathématiques</p>
+            <button onclick="window.location.href='SimFast-Module_Probabilite.php'">Probabilités</button>
+            <button onclick="window.location.href='SimFast-Module_Derivee.php'">Dérivée</button>
+            <p> Informatique </p>
+            <button onclick="window.location.href='SimFast-Module_Crypto.php'">Chiffrement</button>
+            <button onclick="window.location.href='SimFast-Module_Conversion.php'">Convertisseur</button>
+            <p>Gestion</p>
+            <button onclick="window.location.href='SimFast-Module_Amortissement.php'">Amortissement</button>
         </div>
 
         <div class='modules_navigation'>
@@ -55,7 +72,7 @@ if(isset($_SESSION['login'])){
     <footer>
         <?php include '../Serveur/footer.php'; ?>
     </footer>
-
+    <script type="text/javascript" src="javaScript/menu_vertical.js"></script>
 </body>
 
 
