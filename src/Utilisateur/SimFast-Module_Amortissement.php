@@ -68,16 +68,16 @@ if (isset($_SESSION['login'])) {
                     <form action="serveur/depreciation_calcul.php" method="post">
                         <table>
                             <tr>
-                                <td>Montant à amortir:</td>
-                                <td><input class="Amortissement_textfiel_input" type="text" name="montant" value="<?php if(isset($_SESSION["montant"]))echo $_SESSION["montant"]; ?>"></td>
+                                <td><label for="montant">Montant à amortir:</label></td>
+                                <td><input class="Amortissement_textfiel_input" id="montant" type="text" name="montant" value="<?php if(isset($_SESSION["montant"]))echo $_SESSION["montant"]; ?>"></td>
                             </tr>
                             <tr>
-                                <td>Durée d'utilisation du bien:</td>
-                                <td><input class="Amortissement_textfiel_input" type="text" name="duree" value="<?php if(isset($_SESSION["duree"]))echo $_SESSION["duree"]; ?>"></td>
+                                <td><label for="duree">Durée d'utilisation du bien:</label></td>
+                                <td><input class="Amortissement_textfiel_input" id="duree" type="text" name="duree" value="<?php if(isset($_SESSION["duree"]))echo $_SESSION["duree"]; ?>"></td>
                             </tr>
                             <tr>
-                                <td>Date de début de l'amortissement:</td>
-                                <td><input class="Amortissement_textfiel_input" type="date" name="date" value="<?php if(isset($_SESSION["date"]))echo $_SESSION["date"]; ?>"></td>
+                                <td><label for="date">Date de début de l'amortissement:</label></td>
+                                <td><input class="Amortissement_textfiel_input" id="date" type="date" name="date" value="<?php if(isset($_SESSION["date"]))echo $_SESSION["date"]; ?>"></td>
                             </tr>
                             <tr>
                                 <td><input type="submit" name="amortir" value="amortir"></td>
