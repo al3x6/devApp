@@ -45,7 +45,15 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 'gestion') {
                 <textarea class="stats_modules_graphe" name="stats_modules_graphe"></textarea>
             </div>
             <?php
-            //Statistiques visiteurs totaux
+            //Statistiques nombre d'utilisateur
+            $stat_total_utilisateur = $db->prepare("SELECT * FROM utilisateur");
+            $stat_total_utilisateur->execute();
+            $nbr_utilisateur = 0;
+            while ($resultat = $stat_total_utilisateur->fetch(PDO::FETCH_ASSOC)):
+                $nbr_utilisateur += 1;
+            endwhile;
+
+            //Statistiques visite totaux
             $stat_visite = $db->prepare("SELECT * FROM stats_visite");
             $stat_visite->execute();
             $nbr_visiteurs_totaux = 0;
@@ -86,9 +94,13 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 'gestion') {
             ?>
 
             <div class="Statistiques_p">
-                <p>Nombre de visiteurs totaux : <?= $nbr_visiteurs_totaux ?> </p>
-                <p>Nombre de visiteurs aujourd'hui: <?= $nbr_visiteurs_jour ?></p>
+                <p>Nombre d'utilisateur : <?= $nbr_utilisateur ?> </p>
+                <p>Nombre de visite total : <?= $nbr_visiteurs_totaux ?> </p>
                 <p>Nombre de visiteurs cette semaine: <?= $nbr_visiteurs_semaine ?></p>
+                <p>Nombre de visiteurs aujourd'hui: <?= $nbr_visiteurs_jour ?></p>
+
+                <br>
+
             </div>
         </div>
     </div>
