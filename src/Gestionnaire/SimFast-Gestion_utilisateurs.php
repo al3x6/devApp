@@ -52,7 +52,7 @@ if(isset($_SESSION['login']) && $_SESSION['login'] == 'gestion' ){
                     $req=$db->prepare("SELECT * FROM utilisateur");
                     $req->execute();
                     while($resultat = $req->fetch(PDO::FETCH_ASSOC)): // On créer des colonnes tant qu'il y a des utilisateurs
-                        if ($resultat['login'] != "admin"){?>
+                        if ($resultat['login'] != "admin" and $resultat['login'] != "gestion"){?>
                             <tr>
                                 <td><?= $resultat['login']?></td>
                                 <td><?= $resultat['email']?></td>
