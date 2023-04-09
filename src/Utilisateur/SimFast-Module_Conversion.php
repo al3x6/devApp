@@ -84,7 +84,7 @@ if(isset($_SESSION['login'])){
                         <input class="output_valeurs" id="Conversion" type="text" name="output_val" value="<?php if(isset($_SESSION["valeur"])){ echo $_SESSION["valeur"];}?>">
                         <label for="Conversion_retour"></label>
                         <input class="output_valeurs unmodifiable" id="Conversion_retour" type="text" value="<?php if(isset($_GET["conversion"])){ echo $_GET["conversion"];}?>">
-                        <input type="submit" value="convertir" name="convertir">
+                        <input type="submit" value="convertir" name="convertir" class="bouton_valider">
                     </div>
                     </form>
             <p class="error"><?php if(isset($erreur)){echo $erreur;} ?></p>

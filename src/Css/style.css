@@ -28,6 +28,27 @@ body {
     /* grow : Grossir jusqu'à prendre toute l'espace disponible */
 }
 
+.bouton_valider{
+    height: 35px;
+    width: 100px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: rgba(215, 55, 55, 0.46);
+
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.bouton_valider:hover {
+    background-color: rgba(253, 54, 54, 0.459);
+
+    transform: scale(1.05);
+}
+
+
 /********************************BARRE DE NAVIGATION***************************************/
 
 .navigation {
@@ -296,14 +317,21 @@ footer>a {
 }
 
 .bouton_submit {
-    /* Bouton Valider */
-    border: 0px;
-    border-radius: 15px;
-    padding: 15px;
     margin-top: 5%;
     margin-inline: 25%;
-    background-color: rgba(253, 54, 54, 0.459);
+    height: 35px;
+    width: 100px;
+    font-size: 16px;
+    background-color: rgba(215, 55, 55, 0.46);
+    color: white;
+    border: none;
+    border-radius: 15px;
     cursor: pointer;
+    transition: 0.2s;
+}
+.bouton_submit:hover {
+    background-color: rgba(253, 54, 54, 0.459);
+    transform: scale(1.05);
 }
 
 .footer_rectangle_blanc {
@@ -407,21 +435,6 @@ h4 {
     width: 150%;
 }
 
-.Proba_valeurs input[type="submit"] {
-    height: 35px;
-    width: 100px;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: rgba(253, 54, 54, 0.459);
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-.Proba_valeurs input[type="submit"]:hover {
-    background-color: black;
-}
-
 .Proba_Resultat {
     /* Bloc contenant les <textarea> et les <p> */
     display: flex;
@@ -506,17 +519,6 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     -webkit-appearance: none;
     margin: 0;
     }
-
-.Conversion_output input[type="submit"] {
-    border: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 15px;
-    background-color: rgba(253, 54, 54, 0.459);
-    margin-top: 5px;
-    cursor: pointer;
-}
-
 /***********************Module d'amortissement*********************/
 
 .Module_Amortissement {
@@ -579,17 +581,6 @@ input::-webkit-outer-spin-button {    /* Pour retirer les flèches des input num
     /*position: relative;*/
     bottom: 50px;
 }
-
-.Amortissement_input input[type="submit"] {
-    border: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 15px;
-    background-color: rgba(253, 54, 54, 0.459);
-    margin-top: 5px;
-    cursor: pointer;
-}
-
 /***************************Module de crypto***************************/
 .Crypto_content {
     display: flex;
@@ -658,11 +649,6 @@ label {
     align-items: center;
     margin-top: 10px;
 }
-
-.Crypto_button_container input[type="button"] {
-    margin-left: 10px;
-}
-
 .Crypto_submit_button {
     background-color: rgba(253, 54, 54, 0.459);
     color: #fff;
@@ -735,21 +721,6 @@ label {
 
 .Deriv_valeurs input.Deriv_input_text[type=text]:focus {
     width: 150%;
-}
-
-.Deriv_valeurs input[type="submit"] {
-    height: 35px;
-    width: 100px;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: rgba(253, 54, 54, 0.459);
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-.Deriv_valeurs input[type="submit"]:hover {
-    background-color: black;
 }
 
 .Deriv_Resultat {

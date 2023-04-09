@@ -80,7 +80,7 @@ if (isset($_SESSION['login'])) {
                                 <td><input class="Amortissement_textfiel_input" id="date" type="date" name="date" value="<?php if(isset($_SESSION["date"]))echo $_SESSION["date"]; ?>"></td>
                             </tr>
                             <tr>
-                                <td><input type="submit" name="amortir" value="amortir"></td>
+                                <td><input type="submit" name="amortir" value="amortir" class="bouton_valider"></td>
                             </tr>
                         </table>
                         <p class="error"><?php if (isset($err)) echo $err; ?></p>

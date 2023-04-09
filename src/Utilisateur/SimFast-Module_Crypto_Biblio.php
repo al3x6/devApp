@@ -62,7 +62,7 @@ if (isset($_SESSION['login'])) {
             </table>
         </div>
         <div class="gestion_bouton_supprimer">
-            <input class="Valide_suppression" type="submit" name="suppression" value="Supprimer">
+            <input type="submit" name="suppression" value="Supprimer" class="bouton_valider">
         </div>
 
     </form>

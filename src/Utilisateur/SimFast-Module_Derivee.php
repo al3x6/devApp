@@ -62,7 +62,7 @@ if (isset($_SESSION['login'])) {
                         <tr>
                             <td><label for="entrer_fonction">entrer une fonction f(x)=</label></td>
                             <td><input class="Deriv_input_text" id="entrer_fonction" type="text" name="fonction"></td>
-                            <td><input type="submit" name="valider" value="valider"></td>
+                            <td><input type="submit" name="valider" value="valider" class="bouton_valider"></td>
                         </tr>
                     </table>
             </div>

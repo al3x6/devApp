@@ -75,9 +75,9 @@ if (isset($_SESSION['login'])) {
 
                             <br>
                             <div class="Crypto_button_container">
-                                <input type="submit" name="chiffrage" value="Valider" class="Crypto_submit_button">
-                                <a href="serveur/insert_library.php"><input type="button" class="Crypto_submit_button"
-                                                                            value="Enregistrer"></a>
+                                <input type="submit" name="chiffrage" value="Valider" class="bouton_valider">
+                                <a href="serveur/insert_library.php"><input type="button" class="bouton_valider"
+                                                                            value="Enregistrer" ></a>
                             </div>
                             <p class="Crypto_error_message"><?php if (isset($err)) echo $err; ?></p>
                         </div>

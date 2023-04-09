@@ -69,7 +69,7 @@ if(isset($_SESSION['login'])){
                         <tr>
                             <td><label for="sigma">σ (sigma)</label></td>
                             <td><input class="Proba_input_text" id="sigma" type="text" name="sigma"></td>
-                            <td><input type="submit" name="valider" value="valider"></td>
+                            <td><input type="submit" name="valider" value="valider" class="bouton_valider"></td>
                         </tr>
                     </table>
             </div>

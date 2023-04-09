@@ -50,7 +50,7 @@ if(isset($_SESSION['login'])){
                     <br>
                     <input class="textfield" type="password" name="cnewmdp" placeholder="Confirmation mot de passe">
                     <br>
-                    <input class="bouton_submit" type="submit" name="mdpChange" value="Valider">
+                    <input class="bouton_valider" type="submit" name="mdpChange" value="Valider">
                 </div>
             </form>
             <p class="success"><?php if(isset($success)){echo $success;} ?></p>
