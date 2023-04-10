@@ -2,6 +2,7 @@ from sympy import *
 import matplotlib.pyplot as plt
 import numpy as np
 import sys
+import os
 
 def derivative(function):
     """ Calcule la dérivée de la fonction
@@ -30,13 +31,23 @@ def afficher_courbe(function):
     plt.clf()
     x = Symbol('x')
     y = parse_expr(function)
-    f = lambdify(x, y)
+    f = lambdify(x,y)
     x_vals = np.linspace(-10, 10, 100)
     y_vals = f(x_vals)
-    plt.plot(x_vals, y_vals)
+    plt.plot(x_vals,y_vals)
     #plt.show()
-    plt.savefig('src/Utilisateur/img/courbe.png')
+
+    plt.savefig('../img/courbe.png')
     #function=str(function)
+
+#     img_dir = os.path.abspath('img')
+#         if not os.path.exists(img_dir):
+#             os.makedirs(img_dir)
+#     plt.savefig(os.path.join(img_dir,'graphe.png'))
+    #plt.savefig('C:\\Users\\alexi\\sae_dev_appli\\src\\Utilisateur\\img\\graphe.png'))
+#     img_dir = os.path.abspath('C:/Users/alexi/sae_dev_appli/src/Utilisateur/img')
+#     plt.savefig(os.path.join(img_dir, 'courbe.png'))
+#     plt.savefig('C:/Users/alexi/sae_dev_appli/src/Utilisateur/img/courbe.png'))
     return derivative(function)
 
 if __name__ == '__main__':
